@@ -445,72 +445,67 @@
     </Access>
     <Access Scope="GlobalVariable" UId="35">
       <Symbol>
-        <Component Name="extension block_DB" />
+        <Component Name="SeqData" />
+        <Component Name="seqNumber" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="36">
       <Symbol>
         <Component Name="SeqData" />
-        <Component Name="seqNumber" />
+        <Component Name="error" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="37">
       <Symbol>
         <Component Name="SeqData" />
-        <Component Name="error" />
+        <Component Name="partInPos1" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="38">
       <Symbol>
         <Component Name="SeqData" />
-        <Component Name="partInPos1" />
+        <Component Name="partInPos2" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="39">
       <Symbol>
         <Component Name="SeqData" />
-        <Component Name="partInPos2" />
+        <Component Name="partInPos3" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="40">
       <Symbol>
         <Component Name="SeqData" />
-        <Component Name="partInPos3" />
+        <Component Name="startConv" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="41">
       <Symbol>
         <Component Name="SeqData" />
-        <Component Name="startConv" />
+        <Component Name="automaticMode" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="42">
       <Symbol>
         <Component Name="SeqData" />
-        <Component Name="automaticMode" />
+        <Component Name="robotFill" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="43">
       <Symbol>
         <Component Name="SeqData" />
-        <Component Name="robotFill" />
+        <Component Name="robotGoToMagazine" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="44">
       <Symbol>
         <Component Name="SeqData" />
-        <Component Name="robotGoToMagazine" />
-      </Symbol>
-    </Access>
-    <Access Scope="GlobalVariable" UId="45">
-      <Symbol>
-        <Component Name="SeqData" />
         <Component Name="robotGoToStation" />
       </Symbol>
     </Access>
-    <Call UId="46">
+    <Call UId="45">
       <CallInfo Name="Sequencer" BlockType="FB">
-        <Instance Scope="GlobalVariable" UId="47">
+        <Instance Scope="GlobalVariable" UId="46">
           <Component Name="InstSequencer" />
         </Instance>
         <Parameter Name="OFF_SQ" Section="Input" Type="Bool" />
@@ -592,334 +587,329 @@
         <Parameter Name="robotFill" Section="Output" Type="Bool" />
         <Parameter Name="robotGoToMagazine" Section="Output" Type="Bool" />
         <Parameter Name="robotGoToStation" Section="Output" Type="Bool" />
-        <Parameter Name="extension block" Section="InOut" Type="&quot;extension block&quot;" />
       </CallInfo>
     </Call>
   </Parts>
   <Wires>
-    <Wire UId="103">
+    <Wire UId="102">
       <Powerrail />
-      <NameCon UId="46" Name="en" />
+      <NameCon UId="45" Name="en" />
+    </Wire>
+    <Wire UId="103">
+      <IdentCon UId="21" />
+      <NameCon UId="45" Name="OFF_SQ" />
     </Wire>
     <Wire UId="104">
-      <IdentCon UId="21" />
-      <NameCon UId="46" Name="OFF_SQ" />
+      <IdentCon UId="22" />
+      <NameCon UId="45" Name="INIT_SQ" />
     </Wire>
     <Wire UId="105">
-      <IdentCon UId="22" />
-      <NameCon UId="46" Name="INIT_SQ" />
+      <IdentCon UId="23" />
+      <NameCon UId="45" Name="ACK_EF" />
     </Wire>
     <Wire UId="106">
-      <IdentCon UId="23" />
-      <NameCon UId="46" Name="ACK_EF" />
+      <OpenCon UId="47" />
+      <NameCon UId="45" Name="REG_EF" />
     </Wire>
     <Wire UId="107">
       <OpenCon UId="48" />
-      <NameCon UId="46" Name="REG_EF" />
+      <NameCon UId="45" Name="ACK_S" />
     </Wire>
     <Wire UId="108">
       <OpenCon UId="49" />
-      <NameCon UId="46" Name="ACK_S" />
+      <NameCon UId="45" Name="REG_S" />
     </Wire>
     <Wire UId="109">
       <OpenCon UId="50" />
-      <NameCon UId="46" Name="REG_S" />
+      <NameCon UId="45" Name="HALT_SQ" />
     </Wire>
     <Wire UId="110">
       <OpenCon UId="51" />
-      <NameCon UId="46" Name="HALT_SQ" />
+      <NameCon UId="45" Name="HALT_TM" />
     </Wire>
     <Wire UId="111">
       <OpenCon UId="52" />
-      <NameCon UId="46" Name="HALT_TM" />
+      <NameCon UId="45" Name="ZERO_OP" />
     </Wire>
     <Wire UId="112">
       <OpenCon UId="53" />
-      <NameCon UId="46" Name="ZERO_OP" />
+      <NameCon UId="45" Name="EN_IL" />
     </Wire>
     <Wire UId="113">
       <OpenCon UId="54" />
-      <NameCon UId="46" Name="EN_IL" />
+      <NameCon UId="45" Name="EN_SV" />
     </Wire>
     <Wire UId="114">
       <OpenCon UId="55" />
-      <NameCon UId="46" Name="EN_SV" />
+      <NameCon UId="45" Name="EN_ACKREQ" />
     </Wire>
     <Wire UId="115">
       <OpenCon UId="56" />
-      <NameCon UId="46" Name="EN_ACKREQ" />
+      <NameCon UId="45" Name="EN_SSKIP" />
     </Wire>
     <Wire UId="116">
       <OpenCon UId="57" />
-      <NameCon UId="46" Name="EN_SSKIP" />
+      <NameCon UId="45" Name="DISP_SACT" />
     </Wire>
     <Wire UId="117">
       <OpenCon UId="58" />
-      <NameCon UId="46" Name="DISP_SACT" />
+      <NameCon UId="45" Name="DISP_SEF" />
     </Wire>
     <Wire UId="118">
       <OpenCon UId="59" />
-      <NameCon UId="46" Name="DISP_SEF" />
+      <NameCon UId="45" Name="DISP_SALL" />
     </Wire>
     <Wire UId="119">
       <OpenCon UId="60" />
-      <NameCon UId="46" Name="DISP_SALL" />
+      <NameCon UId="45" Name="S_PREV" />
     </Wire>
     <Wire UId="120">
       <OpenCon UId="61" />
-      <NameCon UId="46" Name="S_PREV" />
+      <NameCon UId="45" Name="S_NEXT" />
     </Wire>
     <Wire UId="121">
-      <OpenCon UId="62" />
-      <NameCon UId="46" Name="S_NEXT" />
+      <IdentCon UId="24" />
+      <NameCon UId="45" Name="SW_AUTO" />
     </Wire>
     <Wire UId="122">
-      <IdentCon UId="24" />
-      <NameCon UId="46" Name="SW_AUTO" />
+      <OpenCon UId="62" />
+      <NameCon UId="45" Name="SW_TAP" />
     </Wire>
     <Wire UId="123">
       <OpenCon UId="63" />
-      <NameCon UId="46" Name="SW_TAP" />
+      <NameCon UId="45" Name="SW_TOP" />
     </Wire>
     <Wire UId="124">
-      <OpenCon UId="64" />
-      <NameCon UId="46" Name="SW_TOP" />
+      <IdentCon UId="25" />
+      <NameCon UId="45" Name="SW_MAN" />
     </Wire>
     <Wire UId="125">
-      <IdentCon UId="25" />
-      <NameCon UId="46" Name="SW_MAN" />
+      <OpenCon UId="64" />
+      <NameCon UId="45" Name="S_SEL" />
     </Wire>
     <Wire UId="126">
       <OpenCon UId="65" />
-      <NameCon UId="46" Name="S_SEL" />
+      <NameCon UId="45" Name="S_SELOK" />
     </Wire>
     <Wire UId="127">
       <OpenCon UId="66" />
-      <NameCon UId="46" Name="S_SELOK" />
+      <NameCon UId="45" Name="S_ON" />
     </Wire>
     <Wire UId="128">
       <OpenCon UId="67" />
-      <NameCon UId="46" Name="S_ON" />
+      <NameCon UId="45" Name="S_OFF" />
     </Wire>
     <Wire UId="129">
       <OpenCon UId="68" />
-      <NameCon UId="46" Name="S_OFF" />
+      <NameCon UId="45" Name="T_PREV" />
     </Wire>
     <Wire UId="130">
       <OpenCon UId="69" />
-      <NameCon UId="46" Name="T_PREV" />
+      <NameCon UId="45" Name="T_NEXT" />
     </Wire>
     <Wire UId="131">
       <OpenCon UId="70" />
-      <NameCon UId="46" Name="T_NEXT" />
+      <NameCon UId="45" Name="T_PUSH" />
     </Wire>
     <Wire UId="132">
       <OpenCon UId="71" />
-      <NameCon UId="46" Name="T_PUSH" />
+      <NameCon UId="45" Name="EN_LMODE" />
     </Wire>
     <Wire UId="133">
-      <OpenCon UId="72" />
-      <NameCon UId="46" Name="EN_LMODE" />
+      <IdentCon UId="26" />
+      <NameCon UId="45" Name="RESET_CRIT" />
     </Wire>
     <Wire UId="134">
-      <IdentCon UId="26" />
-      <NameCon UId="46" Name="RESET_CRIT" />
+      <IdentCon UId="27" />
+      <NameCon UId="45" Name="startButton" />
     </Wire>
     <Wire UId="135">
-      <IdentCon UId="27" />
-      <NameCon UId="46" Name="startButton" />
+      <IdentCon UId="28" />
+      <NameCon UId="45" Name="lightBeam1" />
     </Wire>
     <Wire UId="136">
-      <IdentCon UId="28" />
-      <NameCon UId="46" Name="lightBeam1" />
+      <IdentCon UId="29" />
+      <NameCon UId="45" Name="lightBeam2" />
     </Wire>
     <Wire UId="137">
-      <IdentCon UId="29" />
-      <NameCon UId="46" Name="lightBeam2" />
+      <IdentCon UId="30" />
+      <NameCon UId="45" Name="lightBeam3" />
     </Wire>
     <Wire UId="138">
-      <IdentCon UId="30" />
-      <NameCon UId="46" Name="lightBeam3" />
+      <IdentCon UId="31" />
+      <NameCon UId="45" Name="robotArmDown" />
     </Wire>
     <Wire UId="139">
-      <IdentCon UId="31" />
-      <NameCon UId="46" Name="robotArmDown" />
+      <IdentCon UId="32" />
+      <NameCon UId="45" Name="robotOnStation" />
     </Wire>
     <Wire UId="140">
-      <IdentCon UId="32" />
-      <NameCon UId="46" Name="robotOnStation" />
+      <IdentCon UId="33" />
+      <NameCon UId="45" Name="robotOnMagazine" />
     </Wire>
     <Wire UId="141">
-      <IdentCon UId="33" />
-      <NameCon UId="46" Name="robotOnMagazine" />
+      <IdentCon UId="34" />
+      <NameCon UId="45" Name="mySupervision" />
     </Wire>
     <Wire UId="142">
-      <IdentCon UId="34" />
-      <NameCon UId="46" Name="mySupervision" />
+      <NameCon UId="45" Name="S_NO" />
+      <IdentCon UId="35" />
     </Wire>
     <Wire UId="143">
-      <IdentCon UId="35" />
-      <NameCon UId="46" Name="extension block" />
+      <NameCon UId="45" Name="S_MORE" />
+      <OpenCon UId="72" />
     </Wire>
     <Wire UId="144">
-      <NameCon UId="46" Name="S_NO" />
-      <IdentCon UId="36" />
-    </Wire>
-    <Wire UId="145">
-      <NameCon UId="46" Name="S_MORE" />
+      <NameCon UId="45" Name="S_ACTIVE" />
       <OpenCon UId="73" />
     </Wire>
-    <Wire UId="146">
-      <NameCon UId="46" Name="S_ACTIVE" />
+    <Wire UId="145">
+      <NameCon UId="45" Name="S_TIME" />
       <OpenCon UId="74" />
     </Wire>
-    <Wire UId="147">
-      <NameCon UId="46" Name="S_TIME" />
+    <Wire UId="146">
+      <NameCon UId="45" Name="S_TIMEOK" />
       <OpenCon UId="75" />
     </Wire>
-    <Wire UId="148">
-      <NameCon UId="46" Name="S_TIMEOK" />
+    <Wire UId="147">
+      <NameCon UId="45" Name="S_CRITLOC" />
       <OpenCon UId="76" />
     </Wire>
-    <Wire UId="149">
-      <NameCon UId="46" Name="S_CRITLOC" />
+    <Wire UId="148">
+      <NameCon UId="45" Name="S_CRITLOCERR" />
       <OpenCon UId="77" />
     </Wire>
-    <Wire UId="150">
-      <NameCon UId="46" Name="S_CRITLOCERR" />
+    <Wire UId="149">
+      <NameCon UId="45" Name="S_STATE" />
       <OpenCon UId="78" />
     </Wire>
-    <Wire UId="151">
-      <NameCon UId="46" Name="S_STATE" />
+    <Wire UId="150">
+      <NameCon UId="45" Name="T_NO" />
       <OpenCon UId="79" />
     </Wire>
-    <Wire UId="152">
-      <NameCon UId="46" Name="T_NO" />
+    <Wire UId="151">
+      <NameCon UId="45" Name="T_MORE" />
       <OpenCon UId="80" />
     </Wire>
-    <Wire UId="153">
-      <NameCon UId="46" Name="T_MORE" />
+    <Wire UId="152">
+      <NameCon UId="45" Name="T_CRIT" />
       <OpenCon UId="81" />
     </Wire>
-    <Wire UId="154">
-      <NameCon UId="46" Name="T_CRIT" />
+    <Wire UId="153">
+      <NameCon UId="45" Name="T_CRITOLD" />
       <OpenCon UId="82" />
     </Wire>
-    <Wire UId="155">
-      <NameCon UId="46" Name="T_CRITOLD" />
+    <Wire UId="154">
+      <NameCon UId="45" Name="T_CRITFLT" />
       <OpenCon UId="83" />
     </Wire>
-    <Wire UId="156">
-      <NameCon UId="46" Name="T_CRITFLT" />
+    <Wire UId="155">
+      <NameCon UId="45" Name="ERROR" />
       <OpenCon UId="84" />
     </Wire>
-    <Wire UId="157">
-      <NameCon UId="46" Name="ERROR" />
+    <Wire UId="156">
+      <NameCon UId="45" Name="FAULT" />
       <OpenCon UId="85" />
     </Wire>
+    <Wire UId="157">
+      <NameCon UId="45" Name="ERR_FLT" />
+      <IdentCon UId="36" />
+    </Wire>
     <Wire UId="158">
-      <NameCon UId="46" Name="FAULT" />
+      <NameCon UId="45" Name="SQ_ISOFF" />
       <OpenCon UId="86" />
     </Wire>
     <Wire UId="159">
-      <NameCon UId="46" Name="ERR_FLT" />
-      <IdentCon UId="37" />
-    </Wire>
-    <Wire UId="160">
-      <NameCon UId="46" Name="SQ_ISOFF" />
+      <NameCon UId="45" Name="SQ_HALTED" />
       <OpenCon UId="87" />
     </Wire>
-    <Wire UId="161">
-      <NameCon UId="46" Name="SQ_HALTED" />
+    <Wire UId="160">
+      <NameCon UId="45" Name="TM_HALTED" />
       <OpenCon UId="88" />
     </Wire>
-    <Wire UId="162">
-      <NameCon UId="46" Name="TM_HALTED" />
+    <Wire UId="161">
+      <NameCon UId="45" Name="OP_ZEROED" />
       <OpenCon UId="89" />
     </Wire>
-    <Wire UId="163">
-      <NameCon UId="46" Name="OP_ZEROED" />
+    <Wire UId="162">
+      <NameCon UId="45" Name="IL_ENABLED" />
       <OpenCon UId="90" />
     </Wire>
-    <Wire UId="164">
-      <NameCon UId="46" Name="IL_ENABLED" />
+    <Wire UId="163">
+      <NameCon UId="45" Name="SV_ENABLED" />
       <OpenCon UId="91" />
     </Wire>
-    <Wire UId="165">
-      <NameCon UId="46" Name="SV_ENABLED" />
+    <Wire UId="164">
+      <NameCon UId="45" Name="ACKREQ_ENABLED" />
       <OpenCon UId="92" />
     </Wire>
-    <Wire UId="166">
-      <NameCon UId="46" Name="ACKREQ_ENABLED" />
+    <Wire UId="165">
+      <NameCon UId="45" Name="SSKIP_ENABLED" />
       <OpenCon UId="93" />
     </Wire>
-    <Wire UId="167">
-      <NameCon UId="46" Name="SSKIP_ENABLED" />
+    <Wire UId="166">
+      <NameCon UId="45" Name="SACT_DISP" />
       <OpenCon UId="94" />
     </Wire>
-    <Wire UId="168">
-      <NameCon UId="46" Name="SACT_DISP" />
+    <Wire UId="167">
+      <NameCon UId="45" Name="SEF_DISP" />
       <OpenCon UId="95" />
     </Wire>
-    <Wire UId="169">
-      <NameCon UId="46" Name="SEF_DISP" />
+    <Wire UId="168">
+      <NameCon UId="45" Name="SALL_DISP" />
       <OpenCon UId="96" />
     </Wire>
-    <Wire UId="170">
-      <NameCon UId="46" Name="SALL_DISP" />
+    <Wire UId="169">
+      <NameCon UId="45" Name="AUTO_ON" />
       <OpenCon UId="97" />
     </Wire>
-    <Wire UId="171">
-      <NameCon UId="46" Name="AUTO_ON" />
+    <Wire UId="170">
+      <NameCon UId="45" Name="TAP_ON" />
       <OpenCon UId="98" />
     </Wire>
-    <Wire UId="172">
-      <NameCon UId="46" Name="TAP_ON" />
+    <Wire UId="171">
+      <NameCon UId="45" Name="TOP_ON" />
       <OpenCon UId="99" />
     </Wire>
-    <Wire UId="173">
-      <NameCon UId="46" Name="TOP_ON" />
+    <Wire UId="172">
+      <NameCon UId="45" Name="MAN_ON" />
       <OpenCon UId="100" />
     </Wire>
-    <Wire UId="174">
-      <NameCon UId="46" Name="MAN_ON" />
+    <Wire UId="173">
+      <NameCon UId="45" Name="LMODE_ENABLED" />
       <OpenCon UId="101" />
     </Wire>
-    <Wire UId="175">
-      <NameCon UId="46" Name="LMODE_ENABLED" />
-      <OpenCon UId="102" />
+    <Wire UId="174">
+      <NameCon UId="45" Name="partInPos1" />
+      <IdentCon UId="37" />
     </Wire>
-    <Wire UId="176">
-      <NameCon UId="46" Name="partInPos1" />
+    <Wire UId="175">
+      <NameCon UId="45" Name="partInPos2" />
       <IdentCon UId="38" />
     </Wire>
-    <Wire UId="177">
-      <NameCon UId="46" Name="partInPos2" />
+    <Wire UId="176">
+      <NameCon UId="45" Name="partInPos3" />
       <IdentCon UId="39" />
     </Wire>
-    <Wire UId="178">
-      <NameCon UId="46" Name="partInPos3" />
+    <Wire UId="177">
+      <NameCon UId="45" Name="startConv" />
       <IdentCon UId="40" />
     </Wire>
-    <Wire UId="179">
-      <NameCon UId="46" Name="startConv" />
+    <Wire UId="178">
+      <NameCon UId="45" Name="automaticMode" />
       <IdentCon UId="41" />
     </Wire>
-    <Wire UId="180">
-      <NameCon UId="46" Name="automaticMode" />
+    <Wire UId="179">
+      <NameCon UId="45" Name="robotFill" />
       <IdentCon UId="42" />
     </Wire>
-    <Wire UId="181">
-      <NameCon UId="46" Name="robotFill" />
+    <Wire UId="180">
+      <NameCon UId="45" Name="robotGoToMagazine" />
       <IdentCon UId="43" />
     </Wire>
-    <Wire UId="182">
-      <NameCon UId="46" Name="robotGoToMagazine" />
+    <Wire UId="181">
+      <NameCon UId="45" Name="robotGoToStation" />
       <IdentCon UId="44" />
-    </Wire>
-    <Wire UId="183">
-      <NameCon UId="46" Name="robotGoToStation" />
-      <IdentCon UId="45" />
     </Wire>
   </Wires>
 </FlgNet></NetworkSource>

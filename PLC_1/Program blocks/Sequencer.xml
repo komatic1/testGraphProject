@@ -5,7 +5,7 @@
     <AttributeList>
       <AcknowledgeErrorsRequired>true</AcknowledgeErrorsRequired>
       <AutoNumber>true</AutoNumber>
-      <ExtensionBlockName>"extension block"</ExtensionBlockName>
+      <ExtensionBlockName>"ExtensionToGRAPH"</ExtensionBlockName>
       <GraphVersion>5.0</GraphVersion>
       <HeaderAuthor />
       <HeaderFamily />
@@ -956,33 +956,7 @@
       </AttributeList>
     </Member>
   </Section>
-  <Section Name="InOut">
-    <Member Name="extension block" Datatype="&quot;extension block&quot;" Accessibility="Public">
-      <Sections>
-        <Section Name="Input" />
-        <Section Name="Output" />
-        <Section Name="InOut">
-          <Member Name="InOutRTData" Datatype="G7_RTDataPlus_V5" Version="1.0">
-            <Sections>
-              <Section Name="None" />
-            </Sections>
-          </Member>
-          <Member Name="InOutG7T" Datatype="Array[*] of G7_TransitionPlus_V5" Version="1.0">
-            <Sections>
-              <Section Name="None" />
-            </Sections>
-          </Member>
-          <Member Name="InOutG7S" Datatype="Array[*] of G7_StepPlus_V5" Version="1.0">
-            <Sections>
-              <Section Name="None" />
-            </Sections>
-          </Member>
-          <Member Name="InOutG7Arrays" Datatype="Array[*] of USInt" />
-        </Section>
-        <Section Name="Static" />
-      </Sections>
-    </Member>
-  </Section>
+  <Section Name="InOut" />
   <Section Name="Static">
     <Member Name="statLightbeam3Fal" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
       <AttributeList>
