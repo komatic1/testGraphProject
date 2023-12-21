@@ -1222,7 +1222,7 @@
             <StartValue Informative="true">9</StartValue>
           </Member>
           <Member Name="LOCK_CNT" Datatype="USInt">
-            <StartValue Informative="true">3</StartValue>
+            <StartValue Informative="true">2</StartValue>
           </Member>
           <Member Name="SUP_CNT" Datatype="USInt">
             <StartValue Informative="true">1</StartValue>
@@ -2254,19 +2254,19 @@
     <Steps>
       <Step Number="1" Init="true" Name="BasicPosition" MaximumStepTime="T#10S" WarningTime="T#7S">
         <Actions>
-          <Action Interlock="true" Qualifier="R">
+          <Action Qualifier="R">
             <Token Text="#partInPos1" />
             <Token Text="&#xA;" />
           </Action>
-          <Action Interlock="true" Qualifier="R">
+          <Action Qualifier="R">
             <Token Text="#partInPos2" />
             <Token Text="&#xA;" />
           </Action>
-          <Action Interlock="true" Qualifier="R">
+          <Action Qualifier="R">
             <Token Text="#partInPos3" />
             <Token Text="&#xA;" />
           </Action>
-          <Action Interlock="true" Qualifier="R">
+          <Action Qualifier="R">
             <Token Text="#startConv" />
             <Token Text="&#xA;" />
           </Action>
@@ -2294,29 +2294,12 @@
             </AlarmText>
             <FlgNet>
               <Parts>
-                <Access Scope="LocalVariable" UId="21">
-                  <Symbol>
-                    <Component Name="safetyOK" />
-                  </Symbol>
-                </Access>
-                <Part Name="A" UId="22">
-                  <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
-                </Part>
-                <Part Name="IlCoil" UId="23">
-                  <Comment>
-                    <MultiLanguageText Lang="de-DE" />
-                    <MultiLanguageText Lang="en-US">Comment</MultiLanguageText>
-                  </Comment>
-                </Part>
+                <Part Name="IlCoil" UId="21" />
               </Parts>
               <Wires>
-                <Wire UId="24">
-                  <IdentCon UId="21" />
-                  <NameCon UId="22" Name="in1" />
-                </Wire>
-                <Wire UId="25">
-                  <NameCon UId="22" Name="out" />
-                  <NameCon UId="23" Name="in" />
+                <Wire UId="23">
+                  <OpenCon UId="22" />
+                  <NameCon UId="21" Name="in" />
                 </Wire>
               </Wires>
             </FlgNet>
