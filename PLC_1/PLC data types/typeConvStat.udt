@@ -1,0 +1,11 @@
+﻿TYPE "typeConvStat"
+TITLE = conveyor status
+VERSION : 0.1
+//output signal of conveyors
+   STRUCT
+      valid : Bool;   // as output
+      isRunning : Bool;   // conveyor is running
+   END_STRUCT;
+
+END_TYPE
+

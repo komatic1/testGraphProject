@@ -1,0 +1,162 @@
+﻿FUNCTION_BLOCK "Robot"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      goToMagazine : Bool;
+      goToStation : Bool;
+      fill : Bool;
+      xPosition : Int;
+      yPosition : Int;
+   END_VAR
+
+   VAR_OUTPUT 
+      pressingNut : Bool;
+      moveUp : Bool;
+      moveDown : Bool;
+      moveLeft : Bool;
+      isOnStation : Bool;
+      isOnMagazine : Bool;
+      moveRight : Bool;
+   END_VAR
+
+   VAR 
+      statMoveUp : Bool;
+      statMoveDown : Bool;
+      statMoveLeft : Bool;
+      statMoveRight : Bool;
+      statIsOnMagazine : Bool;
+      statPressingNut : Bool;
+      statGoToStation : Bool;
+      statIsOnStation : Bool;
+      statRobot : Int;
+   END_VAR
+
+   VAR_TEMP 
+      tempYPosition : Int;
+      tempXPosition : Int;
+   END_VAR
+
+   VAR CONSTANT 
+      ARM_UP : Int := 1;   // object arrived postion 1
+      DIRECTION_RIGHT : Int := 6;
+      OBJECT_FILL : Int := 4;   // object arrived postion 2 and not filled
+      DIRECTION_LEFT : Int := 2;
+      ARM_DOWN : Int := 3;   // object arrived postion 2 and filled
+      ARM_UP_BACK : Int := 5;
+      ARM_DOWN_BACK : Int := 7;
+      IDLE : Int;
+   END_VAR
+
+
+BEGIN
+	//=============================================================================
+	//Siemens AG // (c)Copyright (2018)
+	//-----------------------------------------------------------------------------
+	// Library: -
+	// Tested with: CPU 1517-3 PN/DP V2.5
+	// Engineering: TIA Portal V15
+	// Restrictions: -
+	// Requirements: PLC (S7-1500)
+	// Functionality: Robot
+	//-----------------------------------------------------------------------------
+	// Change log table:
+	// Version  Date      Expert in charge  Changes applied
+	// 01.00.00 24.08.18  Siemens           First released version
+	//=============================================================================
+	
+	// read inputs
+	#tempYPosition := #yPosition;
+	#tempXPosition := #xPosition;
+	
+	CASE #statRobot OF
+	    //robot on magazine   
+	  #IDLE:
+	    #statMoveDown := FALSE;
+	    #statIsOnMagazine := FALSE;
+	    IF (#goToStation = TRUE)
+	    THEN
+	      #statRobot := #ARM_UP;
+	    END_IF;
+	    
+	    //robot moves up 
+	  #ARM_UP:
+	    #statMoveDown := FALSE;
+	    #statMoveUp := TRUE;
+	    IF (#tempYPosition = 100)
+	    THEN
+	      #statRobot := #DIRECTION_LEFT;
+	    END_IF;
+	    
+	    //robot moves to the left direction     
+	  #DIRECTION_LEFT:
+	    #statMoveUp := FALSE;
+	    #statMoveLeft := TRUE;
+	    IF (#tempXPosition = 100)
+	    THEN
+	      #statRobot := #ARM_DOWN
+	      ;
+	    END_IF;
+	    
+	    //robot moves down    
+	  #ARM_DOWN:
+	    #statMoveLeft := FALSE;
+	    #statMoveDown := TRUE;
+	    IF (#tempYPosition = 0)
+	    THEN
+	      #statIsOnStation := TRUE;
+	      #statRobot := #OBJECT_FILL;
+	    END_IF;
+	    
+	    //fill  
+	  #OBJECT_FILL:
+	    #statMoveDown := FALSE;
+	    #statIsOnStation := FALSE;
+	    #statPressingNut := #fill;
+	    IF (#goToMagazine = TRUE)
+	    THEN
+	      #statRobot := #ARM_UP_BACK;
+	    END_IF;
+	    
+	    //robot moves up 
+	  #ARM_UP_BACK:
+	    #statMoveUp := TRUE;
+	    #statPressingNut := FALSE;
+	    IF (#tempYPosition = 100)
+	    THEN
+	      #statRobot := #DIRECTION_RIGHT;
+	    END_IF;
+	    
+	    //robot moves to the right direction     
+	  #DIRECTION_RIGHT:
+	    #statMoveUp := FALSE;
+	    #statMoveRight := TRUE;
+	    IF (#tempXPosition = 0)
+	    THEN
+	      #statRobot := #ARM_DOWN_BACK;
+	    END_IF;
+	    
+	    //robot moves down back to magazine    
+	  #ARM_DOWN_BACK:
+	    #statMoveRight := FALSE;
+	    #statMoveDown := TRUE;
+	    IF (#tempYPosition = 0)
+	    THEN
+	      #statIsOnMagazine := TRUE;
+	      #statRobot := #IDLE;
+	    END_IF;
+	    
+	  ELSE  // Statement section ELSE
+	    ;
+	END_CASE;
+	
+	//write outputs
+	#moveUp := #statMoveUp;
+	#moveDown := #statMoveDown;
+	#moveLeft := #statMoveLeft;
+	#moveRight := #statMoveRight;
+	#isOnMagazine := #statIsOnMagazine;
+	#isOnStation := #statIsOnStation;
+	#pressingNut := #statPressingNut;
+	
+END_FUNCTION_BLOCK
+

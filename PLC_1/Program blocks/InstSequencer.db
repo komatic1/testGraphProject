@@ -1,0 +1,28 @@
+﻿DATA_BLOCK "InstSequencer"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+NON_RETAIN
+"Sequencer"
+
+BEGIN
+   BasicPosition.T_MAX := T#0MS;
+   BasicPosition.T_WARN := T#0MS;
+   StartConveyor.T_MAX := T#420MS;
+   StartConveyor.T_WARN := T#385MS;
+   MovePart.T_MAX := T#6S_408MS;
+   MovePart.T_WARN := T#5S_874MS;
+   GoToStation.T_MAX := T#3S_936MS;
+   GoToStation.T_WARN := T#3S_608MS;
+   Fill.T_MAX := T#3S_606MS;
+   Fill.T_WARN := T#3S_305MS;
+   GoToMagazine.T_MAX := T#3S_966MS;
+   GoToMagazine.T_WARN := T#3S_635MS;
+   RemovePart.T_MAX := T#4S_56MS;
+   RemovePart.T_WARN := T#3S_718MS;
+   ResetPositions.T_MAX := T#0MS;
+   ResetPositions.T_WARN := T#0MS;
+   ResetConveyor.T_MAX := T#0MS;
+   ResetConveyor.T_WARN := T#0MS;
+
+END_DATA_BLOCK
+

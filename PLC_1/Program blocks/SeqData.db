@@ -1,0 +1,39 @@
+﻿DATA_BLOCK "SeqData"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+NON_RETAIN
+   VAR 
+      startButton : Bool;   // Start sequence
+      ackSeq : Bool;   // Acknowledge sequence errors
+      switchOffSeq : Bool;   // Stop sequence
+      initSeq : Bool;   // Initialise sequence
+      simulateError : Bool;   // Engine has fault (simulated)
+      resetCrit : Bool;   // Reset sequence errors
+      seqNumber : Int;   // Active sequence number
+      error : Bool;   // Sequence has an error
+      automaticMode : Bool;   // Sequence mode: automatic
+      manualMode : Bool;   // Sequence mode: manual
+      lightBeam1 : Bool;
+      lightBeam2 : Bool;
+      lightBeam3 : Bool;
+      partInPos1 : Bool;   // Status part is in position 1
+      partInPos2 : Bool;   // Status part is in position 2
+      partInPos3 : Bool;   // Status part is in position 3
+      robotFill : Bool;   // Command for robot to fill part
+      robotGoToStation : Bool;   // Command for robot to go to station
+      robotGoToMagazine : Bool;   // Command for robot to go to magazine
+      robotOnStation : Bool;   // Status robot is on station
+      robotOnMagazine : Bool;   // Status robot is on magazine
+      startConv : Bool;   // Command for conveyor to run
+      mySupervision : Bool;   // My Supervision
+      myInterlock : Bool;   // My Interlock
+   END_VAR
+
+
+BEGIN
+   startButton := false;
+   partInPos1 := false;
+   myInterlock := true;
+
+END_DATA_BLOCK
+

@@ -1,0 +1,11 @@
+﻿DATA_BLOCK "extension block_DB"
+{ DB_Accessible_From_OPC_UA := 'FALSE' ;
+ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+NON_RETAIN
+"extension block"
+
+BEGIN
+
+END_DATA_BLOCK
+

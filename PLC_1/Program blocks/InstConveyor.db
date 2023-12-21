@@ -1,0 +1,10 @@
+﻿DATA_BLOCK "InstConveyor"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+NON_RETAIN
+"Conveyor"
+
+BEGIN
+
+END_DATA_BLOCK
+

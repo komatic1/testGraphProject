@@ -1,0 +1,16 @@
+﻿TYPE "typeConvCmd"
+TITLE = Conveyor command
+VERSION : 0.1
+//input Signals to Conv
+   STRUCT
+      enable : Bool;
+      inputLigBeam : Bool;   // light beam on input of conveyor
+      editLigBeam : Bool;   // light beam on edit station of brownie
+      outputLigBeam : Bool;   // light beam on output of conveyor
+      startConv : Bool;   // manual start of conveyor
+      reset : Bool;   // reset of conveyor belt
+      workStationDone : Bool;   // working station has done process
+   END_STRUCT;
+
+END_TYPE
+

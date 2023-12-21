@@ -1,0 +1,10 @@
+﻿TYPE "typeConvSig"
+TITLE = Conveyor command / status signals
+VERSION : 0.1
+   STRUCT
+      convIn : "typeConvCmd";
+      convOut : "typeConvStat";
+   END_STRUCT;
+
+END_TYPE
+

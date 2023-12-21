@@ -1,0 +1,22 @@
+﻿FUNCTION_BLOCK "extension block"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_IN_OUT 
+      InOutRTData {InstructionName := 'G7_RTDataPlus_V5'; LibVersion := '1.0'} : G7_RTDataPlus_V5;
+      InOutG7T {InstructionName := 'G7_TransitionPlus_V5'; LibVersion := '1.0'} : Array[*] of G7_TransitionPlus_V5;
+      InOutG7S {InstructionName := 'G7_StepPlus_V5'; LibVersion := '1.0'} : Array[*] of G7_StepPlus_V5;
+      InOutG7Arrays : Array[*] of USInt;
+   END_VAR
+
+   VAR_TEMP 
+      t_NumberOfActiveSteps : Int;
+   END_VAR
+
+
+BEGIN
+	  
+	  #t_NumberOfActiveSteps := #InOutG7Arrays[#InOutRTData.OFFSETS.SAX_OFFSET] - 1;
+	  
+	  
+END_FUNCTION_BLOCK
+

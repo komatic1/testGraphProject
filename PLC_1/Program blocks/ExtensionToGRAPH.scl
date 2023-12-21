@@ -1,0 +1,134 @@
+﻿FUNCTION_BLOCK "ExtensionToGRAPH"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_IN_OUT 
+      extRTData {InstructionName := 'G7_RTDataPlus_V5'; LibVersion := '1.0'} : G7_RTDataPlus_V5;   // xyz
+      extG7T {InstructionName := 'G7_TransitionPlus_V5'; LibVersion := '1.0'} : Array[*] of G7_TransitionPlus_V5;
+      extG7S {InstructionName := 'G7_StepPlus_V5'; LibVersion := '1.0'} : Array[*] of G7_StepPlus_V5;
+      extG7Arrays : Array[*] of USInt;
+   END_VAR
+
+   VAR 
+      statLowerG7T { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : DInt;
+      statUpperG7T { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : DInt;
+      statLowerG7S { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : DInt;
+      statUpperG7S { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : DInt;
+      statUserTransitionNumber : Int;
+      statUserStepNumber : Int;
+      statUserActiveSteps : USInt;
+      statUserSatisfiedTrans : USInt;
+   END_VAR
+
+   VAR_TEMP 
+      tempG7TIndex : DInt;
+      tempG7SIndex : DInt;
+   END_VAR
+
+
+BEGIN
+	//=============================================================================
+	//Siemens AG // (c)Copyright (2018)
+	//-----------------------------------------------------------------------------
+	// Library: -
+	// Tested with: CPU 1517-3 PN/DP V2.5
+	// Engineering: TIA Portal V15
+	// Restrictions: -
+	// Requirements: PLC (S7-1500)
+	// Functionality: Extension functionality for iterative access to Graph
+	//                variables and invisible GraphStatusVariables.
+	//-----------------------------------------------------------------------------
+	// Change log table:
+	// Version  Date      Expert in charge  Changes applied
+	// 01.00.00 24.08.18  Siemens           First released version
+	//=============================================================================
+	
+	REGION ReadArrayBounderies
+	  
+	  // Read ArrayBounderies of predefined Graph-Array's
+	  #statLowerG7T := LOWER_BOUND(ARR := #extG7T, DIM := 1);
+	  #statUpperG7T := UPPER_BOUND(ARR := #extG7T, DIM := 1);
+	  
+	  #statLowerG7S := LOWER_BOUND(ARR := #extG7S, DIM := 1);
+	  #statUpperG7S := UPPER_BOUND(ARR := #extG7S, DIM := 1);
+	  
+	END_REGION
+	
+	
+	REGION IterativeTransitionAccess
+	  //Example: As a programmer I want to check whether a specific transition
+	  //number (e.g. asked via HMI-Panel) is available in the Graph block.
+	  
+	  FOR #tempG7TIndex := #statLowerG7T TO #statUpperG7T BY 1 DO
+	    ;
+	    IF (#extG7T[#tempG7TIndex].TNO = #statUserTransitionNumber)
+	    THEN
+	      ;
+	      // Do any action
+	      // Do any action            
+	    END_IF;
+	  END_FOR;
+	  
+	END_REGION
+	
+	
+	REGION IterativeStepAccess
+	  //Example: As a programmer I want to check whether a specific step number
+	  //(e.g. asked via HMI-Panel) is available in the Graph block.
+	  
+	  FOR #tempG7SIndex := #statLowerG7S TO #statUpperG7S BY 1 DO
+	    ;
+	    IF (#extG7S[#tempG7SIndex].SNO = #statUserStepNumber)
+	    THEN
+	      ;
+	      // Do any action
+	      // Do any action            
+	    END_IF;
+	  END_FOR;
+	  
+	END_REGION
+	
+	
+	REGION ReadGraphStatusVariables
+	  //*******************************************************************************************************************************************
+	  //GraphStatusVariables are stored within #io_G7Array and normally invisible within the Graph block.
+	  //For specific usecases the GraphStatusVariables can be used via this extension block from Graph Version V4.0 (V14 SP1).
+	  //
+	  //All available GraphStatusVariables are described in the online help within Chapter:
+	  //"Basic information on extending the standard behavior of GRAPH"
+	  //*******************************************************************************************************************************************
+	  //
+	  //Example 1: As a user I want to know the number of active steps "SAX" (for example: two steps are active in one cycle)
+	  //
+	  //         a.) Use the accumulative Array named #io_G7Array with index #io_RT_Data.OFFSETS.SAX_OFFSET
+	  //         b.) #io_G7Arrays[#io_RT_Data.OFFSETS.SAX_OFFSET] give the number of the valid members within the SAX_field --> length of field
+	  //             (in this example the value is 3)
+	  //             #io_G7Arrays[#io_RT_Data.OFFSETS.SAX_OFFSET + 1] give the first valid index FOR active step numbers in this cycle.
+	  //             #io_G7Arrays[#io_RT_Data.OFFSETS.SAX_OFFSET+2] give the second valid index for active step numbers in this cycle.
+	  //             #io_G7Arrays[#io_RT_Data.OFFSETS.SAX_OFFSET+3] can be a reserve/unvalid index or already a member of the next offset.
+	  //             #io_G7S[#io_G7Arrays[#io_RT_Data.OFFSETS.SAX_OFFSET + 1]].SNO give the first valid step number in this cycle.
+	  //             #io_G7S[#io_G7Arrays[#io_RT_Data.OFFSETS.SAX_OFFSET + 2]].SNO give the second valid step number in this cycle.
+	  //         
+	  //         --> Number of active steps is "Number of valid members within SAX_field" - 1
+	  
+	  #statUserActiveSteps := #extG7Arrays[#extRTData.OFFSETS.SAX_OFFSET] - 1;
+	  
+	  
+	  //Example 2: As a user I want to know the number of satisfied Transitions "TTX" (for example: one transition is satisfied within one cycle)
+	  //
+	  //         a.) Use the accumulative Array named #io_G7Array with index #io_RT_Data.OFFSETS.TTX_OFFSET
+	  //         b.) #io_G7Arrays[#io_RT_Data.OFFSETS.TTX_OFFSET] give the number of the valid members within the TTX_field --> length of field
+	  //             (in this example the value is 2)
+	  //         c.) #io_G7Arrays[#io_RT_Data.OFFSETS.TTX_OFFSET+1] give the first valid index for satisfied transition numbers in this cycle.
+	  //             #io_G7Arrays[#io_RT_Data.OFFSETS.TTX_OFFSET+2] can be a reserve/unvalid index or already a member of the next offset.
+	  //         d.) #io_G7T[#io_G7Arrays[#io_RT_Data.OFFSETS.TTX_OFFSET + 1]].TNO give the valid transition number in this cycle.
+	  //         --> Number of satisfied transitions is "Number of valid members within TTX_field" - 1
+	  
+	  #statUserSatisfiedTrans := #extG7Arrays[#extRTData.OFFSETS.TTX_OFFSET] - 1;
+	  
+	END_REGION
+	
+	
+	
+	
+END_FUNCTION_BLOCK
+

@@ -1,0 +1,25 @@
+﻿DATA_BLOCK "SimulationData"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+NON_RETAIN
+   VAR 
+      xPos : Int;   // I
+      yPos : Int;   // I
+      lightBeam1 : Bool;   // I
+      lightBeam2 : Bool;   // I
+      lightBeam3 : Bool;   // I
+      robotArmUp : Bool;   // Q
+      robotArmDown : Bool;   // Q
+      robotArmLeft : Bool;   // Q
+      robotArmRight : Bool;   // Q
+      press : Bool;   // Q
+      conveyorRight : Bool;   // Q
+      robotPosHMI : Int;
+      robotHasChip : Bool;
+   END_VAR
+
+
+BEGIN
+
+END_DATA_BLOCK
+

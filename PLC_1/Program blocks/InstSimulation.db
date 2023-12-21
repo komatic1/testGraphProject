@@ -1,0 +1,10 @@
+﻿DATA_BLOCK "InstSimulation"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+NON_RETAIN
+"Simulation"
+
+BEGIN
+
+END_DATA_BLOCK
+
