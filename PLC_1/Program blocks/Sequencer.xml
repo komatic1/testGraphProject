@@ -958,6 +958,14 @@
   </Section>
   <Section Name="InOut" />
   <Section Name="Static">
+    <Member Name="safetyOK" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
     <Member Name="statLightbeam3Fal" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
       <AttributeList>
         <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
@@ -1013,38 +1021,6 @@
           <Member Name="statUserSatisfiedTrans" Datatype="USInt" />
         </Section>
       </Sections>
-    </Member>
-    <Member Name="memTag" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
-      <AttributeList>
-        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
-        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
-        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
-        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
-      </AttributeList>
-    </Member>
-    <Member Name="lightBeam3Fall" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
-      <AttributeList>
-        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
-        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
-        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
-        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
-      </AttributeList>
-    </Member>
-    <Member Name="out1" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
-      <AttributeList>
-        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
-        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
-        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
-        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
-      </AttributeList>
-    </Member>
-    <Member Name="safetyOK" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
-      <AttributeList>
-        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
-        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
-        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
-        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
-      </AttributeList>
     </Member>
     <Member Name="RT_DATA" Datatype="G7_RTDataPlus_V5" Version="1.0" Remanence="NonRetain" Accessibility="Public">
       <AttributeList>
@@ -1183,9 +1159,7 @@
               </Section>
             </Sections>
           </Member>
-          <Member Name="PRE_CNT" Datatype="USInt">
-            <StartValue Informative="true">3</StartValue>
-          </Member>
+          <Member Name="PRE_CNT" Datatype="USInt" />
           <Member Name="POST_CNT" Datatype="USInt">
             <StartValue Informative="true">1</StartValue>
           </Member>
@@ -1196,10 +1170,10 @@
             <StartValue Informative="true">9</StartValue>
           </Member>
           <Member Name="LOCK_CNT" Datatype="USInt">
-            <StartValue Informative="true">2</StartValue>
+            <StartValue Informative="true">3</StartValue>
           </Member>
           <Member Name="SUP_CNT" Datatype="USInt">
-            <StartValue Informative="true">1</StartValue>
+            <StartValue Informative="true">2</StartValue>
           </Member>
           <Member Name="T_CNT" Datatype="USInt">
             <StartValue Informative="true">9</StartValue>
@@ -2014,18 +1988,7 @@
       </Sections>
     </Member>
   </Section>
-  <Section Name="Temp">
-    <Member Name="tagError" Datatype="Int" />
-    <Member Name="dateTime" Datatype="Date_And_Time" />
-    <Member Name="retval" Datatype="Time" />
-    <Member Name="timeTick" Datatype="Time" />
-    <Member Name="minLimit" Datatype="Real" />
-    <Member Name="inReal" Datatype="Real" />
-    <Member Name="maxLimit" Datatype="Real" />
-    <Member Name="outReal" Datatype="Real" />
-    <Member Name="in1" Datatype="Bool" />
-    <Member Name="in2" Datatype="Bool" />
-  </Section>
+  <Section Name="Temp" />
   <Section Name="Constant" />
 </Sections></Interface>
       <IsIECCheckEnabled>true</IsIECCheckEnabled>
@@ -2062,150 +2025,7 @@
       <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
         <AttributeList>
           <NetworkSource><Graph xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/Graph/v5">
-  <PreOperations>
-    <PermanentOperation ProgrammingLanguage="FBD">
-      <Title>
-        <MultiLanguageText Lang="de-DE" />
-        <MultiLanguageText Lang="en-US">comment 1</MultiLanguageText>
-      </Title>
-      <FlgNet>
-        <Parts>
-          <Access Scope="LocalVariable" UId="21">
-            <Symbol>
-              <Component Name="memTag" />
-            </Symbol>
-          </Access>
-          <Access Scope="GlobalVariable" UId="22">
-            <Symbol>
-              <Component Name="SimulationData" />
-              <Component Name="lightBeam3" />
-            </Symbol>
-          </Access>
-          <Access Scope="LocalVariable" UId="23">
-            <Symbol>
-              <Component Name="lightBeam3Fall" />
-            </Symbol>
-          </Access>
-          <Part Name="NContact" UId="24" />
-          <Part Name="Coil" UId="25" />
-        </Parts>
-        <Wires>
-          <Wire UId="26">
-            <IdentCon UId="21" />
-            <NameCon UId="24" Name="bit" />
-          </Wire>
-          <Wire UId="27">
-            <IdentCon UId="22" />
-            <NameCon UId="24" Name="operand" />
-          </Wire>
-          <Wire UId="28">
-            <NameCon UId="24" Name="out" />
-            <NameCon UId="25" Name="in" />
-          </Wire>
-          <Wire UId="29">
-            <IdentCon UId="23" />
-            <NameCon UId="25" Name="operand" />
-          </Wire>
-        </Wires>
-      </FlgNet>
-    </PermanentOperation>
-    <PermanentOperation ProgrammingLanguage="FBD">
-      <Title>
-        <MultiLanguageText Lang="de-DE" />
-        <MultiLanguageText Lang="en-US">comment 2</MultiLanguageText>
-      </Title>
-      <FlgNet>
-        <Parts>
-          <Access Scope="LocalVariable" UId="21">
-            <Symbol>
-              <Component Name="in1" />
-            </Symbol>
-          </Access>
-          <Access Scope="LocalVariable" UId="22">
-            <Symbol>
-              <Component Name="in2" />
-            </Symbol>
-          </Access>
-          <Access Scope="LocalVariable" UId="23">
-            <Symbol>
-              <Component Name="out1" />
-            </Symbol>
-          </Access>
-          <Part Name="A" UId="24">
-            <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
-            <Negated Name="out" />
-          </Part>
-          <Part Name="Coil" UId="25" />
-        </Parts>
-        <Wires>
-          <Wire UId="26">
-            <IdentCon UId="21" />
-            <NameCon UId="24" Name="in1" />
-          </Wire>
-          <Wire UId="27">
-            <IdentCon UId="22" />
-            <NameCon UId="24" Name="in2" />
-          </Wire>
-          <Wire UId="28">
-            <NameCon UId="24" Name="out" />
-            <NameCon UId="25" Name="in" />
-          </Wire>
-          <Wire UId="29">
-            <IdentCon UId="23" />
-            <NameCon UId="25" Name="operand" />
-          </Wire>
-        </Wires>
-      </FlgNet>
-    </PermanentOperation>
-    <PermanentOperation ProgrammingLanguage="FBD">
-      <Title>
-        <MultiLanguageText Lang="de-DE" />
-        <MultiLanguageText Lang="en-US">comment 2</MultiLanguageText>
-      </Title>
-      <FlgNet>
-        <Parts>
-          <Access Scope="LocalVariable" UId="21">
-            <Symbol>
-              <Component Name="in1" />
-            </Symbol>
-          </Access>
-          <Access Scope="LocalVariable" UId="22">
-            <Symbol>
-              <Component Name="in2" />
-            </Symbol>
-          </Access>
-          <Access Scope="LocalVariable" UId="23">
-            <Symbol>
-              <Component Name="out1" />
-            </Symbol>
-          </Access>
-          <Part Name="X" UId="24">
-            <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
-            <Negated Name="out" />
-          </Part>
-          <Part Name="Coil" UId="25" />
-        </Parts>
-        <Wires>
-          <Wire UId="26">
-            <IdentCon UId="21" />
-            <NameCon UId="24" Name="in1" />
-          </Wire>
-          <Wire UId="27">
-            <IdentCon UId="22" />
-            <NameCon UId="24" Name="in2" />
-          </Wire>
-          <Wire UId="28">
-            <NameCon UId="24" Name="out" />
-            <NameCon UId="25" Name="in" />
-          </Wire>
-          <Wire UId="29">
-            <IdentCon UId="23" />
-            <NameCon UId="25" Name="operand" />
-          </Wire>
-        </Wires>
-      </FlgNet>
-    </PermanentOperation>
-  </PreOperations>
+  <PreOperations />
   <Sequence>
     <Title />
     <Comment>
@@ -2228,19 +2048,19 @@
     <Steps>
       <Step Number="1" Init="true" Name="BasicPosition" MaximumStepTime="T#10S" WarningTime="T#7S">
         <Actions>
-          <Action Qualifier="R">
+          <Action Interlock="true" Qualifier="R">
             <Token Text="#partInPos1" />
             <Token Text="&#xA;" />
           </Action>
-          <Action Qualifier="R">
+          <Action Interlock="true" Qualifier="R">
             <Token Text="#partInPos2" />
             <Token Text="&#xA;" />
           </Action>
-          <Action Qualifier="R">
+          <Action Interlock="true" Qualifier="R">
             <Token Text="#partInPos3" />
             <Token Text="&#xA;" />
           </Action>
-          <Action Qualifier="R">
+          <Action Interlock="true" Qualifier="R">
             <Token Text="#startConv" />
             <Token Text="&#xA;" />
           </Action>
@@ -2248,14 +2068,76 @@
         </Actions>
         <Supervisions>
           <Supervision ProgrammingLanguage="FBD">
+            <Title>
+              <MultiLanguageText Lang="en-US">Suppervision =1 - fault</MultiLanguageText>
+            </Title>
+            <AlarmText>
+              <MultiLanguageText Lang="de-DE">сообщение от супервизион</MultiLanguageText>
+              <MultiLanguageText Lang="en-US">Step activation time</MultiLanguageText>
+            </AlarmText>
             <FlgNet>
               <Parts>
-                <Part Name="SvCoil" UId="21" />
+                <Access Scope="LocalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="StartConveyor" />
+                    <Component Name="U" />
+                  </Symbol>
+                </Access>
+                <Access Scope="TypedConstant" UId="22">
+                  <Constant>
+                    <ConstantValue>t#100ms</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="LocalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="StartConveyor" />
+                    <Component Name="T" />
+                  </Symbol>
+                </Access>
+                <Access Scope="TypedConstant" UId="24">
+                  <Constant>
+                    <ConstantValue>t#100ms</ConstantValue>
+                  </Constant>
+                </Access>
+                <Part Name="Gt" UId="25">
+                  <TemplateValue Name="SrcType" Type="Type">Time</TemplateValue>
+                </Part>
+                <Part Name="Gt" UId="26">
+                  <TemplateValue Name="SrcType" Type="Type">Time</TemplateValue>
+                </Part>
+                <Part Name="A" UId="27">
+                  <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+                </Part>
+                <Part Name="SvCoil" UId="28" />
               </Parts>
               <Wires>
-                <Wire UId="23">
-                  <OpenCon UId="22" />
-                  <NameCon UId="21" Name="in" />
+                <Wire UId="29">
+                  <IdentCon UId="21" />
+                  <NameCon UId="25" Name="in1" />
+                </Wire>
+                <Wire UId="30">
+                  <IdentCon UId="22" />
+                  <NameCon UId="25" Name="in2" />
+                </Wire>
+                <Wire UId="31">
+                  <NameCon UId="25" Name="out" />
+                  <NameCon UId="27" Name="in1" />
+                </Wire>
+                <Wire UId="32">
+                  <IdentCon UId="23" />
+                  <NameCon UId="26" Name="in1" />
+                </Wire>
+                <Wire UId="33">
+                  <IdentCon UId="24" />
+                  <NameCon UId="26" Name="in2" />
+                </Wire>
+                <Wire UId="34">
+                  <NameCon UId="26" Name="out" />
+                  <NameCon UId="27" Name="in2" />
+                </Wire>
+                <Wire UId="35">
+                  <NameCon UId="27" Name="out" />
+                  <NameCon UId="28" Name="in" />
                 </Wire>
               </Wires>
             </FlgNet>
@@ -2263,17 +2145,26 @@
         </Supervisions>
         <Interlocks>
           <Interlock ProgrammingLanguage="FBD">
+            <Title>
+              <MultiLanguageText Lang="en-US">Интерлок если сафети не в порядке</MultiLanguageText>
+            </Title>
             <AlarmText>
+              <MultiLanguageText Lang="de-DE">сообщение от интерлока</MultiLanguageText>
               <MultiLanguageText Lang="en-US">safety not OK</MultiLanguageText>
             </AlarmText>
             <FlgNet>
               <Parts>
-                <Part Name="IlCoil" UId="21" />
+                <Access Scope="LocalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="safetyOK" />
+                  </Symbol>
+                </Access>
+                <Part Name="IlCoil" UId="22" />
               </Parts>
               <Wires>
                 <Wire UId="23">
-                  <OpenCon UId="22" />
-                  <NameCon UId="21" Name="in" />
+                  <IdentCon UId="21" />
+                  <NameCon UId="22" Name="in" />
                 </Wire>
               </Wires>
             </FlgNet>
@@ -2282,112 +2173,12 @@
       </Step>
       <Step Number="2" Init="false" Name="StartConveyor" MaximumStepTime="T#10S" WarningTime="T#7S">
         <Actions>
-          <Action Event="A1" Interlock="true" Qualifier="S">
+          <Action Qualifier="S">
             <Token Text="#automaticMode" />
             <Token Text="&#xA;" />
           </Action>
           <Action Qualifier="N">
             <Token Text="#startConv" />
-            <Token Text="&#xA;" />
-          </Action>
-          <Action Qualifier="N">
-            <Token Text="CALL" />
-            <Token Text=" " />
-            <Token Text="TIME_TCK" />
-            <Token Text="&#xA;" />
-            <Token Text="    " />
-            <Token Text="(" />
-            <Token Text="RET_VAL" />
-            <Token Text=" " />
-            <Token Text="=&gt;" />
-            <Token Text=" " />
-            <Token Text="#retval" />
-            <Token Text="&#xA;" />
-            <Token Text="     " />
-            <Token Text=")" />
-            <Token Text="&#xA;" />
-          </Action>
-          <Action Event="A1" Qualifier="N">
-            <Token Text="CALL" />
-            <Token Text=" " />
-            <Token Text="RD_SYS_T" />
-            <Token Text=" " />
-            <Token Text="DATE_AND_TIME" />
-            <Token Text="&#xA;" />
-            <Token Text="    " />
-            <Token Text="(" />
-            <Token Text="RET_VAL" />
-            <Token Text=" " />
-            <Token Text="=&gt;" />
-            <Token Text=" " />
-            <Token Text="#tagError" />
-            <Token Text="&#xA;" />
-            <Token Text="     " />
-            <Token Text="OUT" />
-            <Token Text=" " />
-            <Token Text="=&gt;" />
-            <Token Text=" " />
-            <Token Text="#dateTime" />
-            <Token Text="&#xA;" />
-            <Token Text="     " />
-            <Token Text=")" />
-            <Token Text="&#xA;" />
-          </Action>
-          <Action Qualifier="N">
-            <Token Text="CALL" />
-            <Token Text=" " />
-            <Token Text="TIME_TCK" />
-            <Token Text="&#xA;" />
-            <Token Text="    " />
-            <Token Text="(" />
-            <Token Text="RET_VAL" />
-            <Token Text=" " />
-            <Token Text="=&gt;" />
-            <Token Text=" " />
-            <Token Text="#timeTick" />
-            <Token Text="&#xA;" />
-            <Token Text="     " />
-            <Token Text=")" />
-            <Token Text="&#xA;" />
-          </Action>
-          <Action Qualifier="N">
-            <Token Text="CALL" />
-            <Token Text=" " />
-            <Token Text="LIMIT" />
-            <Token Text=" " />
-            <Token Text="REAL" />
-            <Token Text="&#xA;" />
-            <Token Text="    " />
-            <Token Text="(" />
-            <Token Text="MN" />
-            <Token Text=" " />
-            <Token Text=":=" />
-            <Token Text=" " />
-            <Token Text="#minLimit" />
-            <Token Text="&#xA;" />
-            <Token Text="     " />
-            <Token Text="IN" />
-            <Token Text=" " />
-            <Token Text=":=" />
-            <Token Text=" " />
-            <Token Text="#inReal" />
-            <Token Text="&#xA;" />
-            <Token Text="     " />
-            <Token Text="MX" />
-            <Token Text=" " />
-            <Token Text=":=" />
-            <Token Text=" " />
-            <Token Text="#maxLimit" />
-            <Token Text="&#xA;" />
-            <Token Text="     " />
-            <Token Text="OUT" />
-            <Token Text=" " />
-            <Token Text="=&gt;" />
-            <Token Text="#outReal" />
-            <Token Text=" " />
-            <Token Text="&#xA;" />
-            <Token Text="     " />
-            <Token Text=")" />
             <Token Text="&#xA;" />
           </Action>
           <Action />
