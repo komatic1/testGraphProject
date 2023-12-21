@@ -952,6 +952,46 @@
       </SW.Blocks.CompileUnit>
       <SW.Blocks.CompileUnit ID="19" CompositionName="CompileUnits">
         <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1D" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="20" CompositionName="CompileUnits">
+        <AttributeList>
           <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
@@ -1137,15 +1177,15 @@
           <ProgrammingLanguage>LAD</ProgrammingLanguage>
         </AttributeList>
         <ObjectList>
-          <MultilingualText ID="1A" CompositionName="Comment">
+          <MultilingualText ID="21" CompositionName="Comment">
             <ObjectList>
-              <MultilingualTextItem ID="1B" CompositionName="Items">
+              <MultilingualTextItem ID="22" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text />
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="1C" CompositionName="Items">
+              <MultilingualTextItem ID="23" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text />
@@ -1153,15 +1193,15 @@
               </MultilingualTextItem>
             </ObjectList>
           </MultilingualText>
-          <MultilingualText ID="1D" CompositionName="Title">
+          <MultilingualText ID="24" CompositionName="Title">
             <ObjectList>
-              <MultilingualTextItem ID="1E" CompositionName="Items">
+              <MultilingualTextItem ID="25" CompositionName="Items">
                 <AttributeList>
                   <Culture>de-DE</Culture>
                   <Text>call simulation</Text>
                 </AttributeList>
               </MultilingualTextItem>
-              <MultilingualTextItem ID="1F" CompositionName="Items">
+              <MultilingualTextItem ID="26" CompositionName="Items">
                 <AttributeList>
                   <Culture>en-US</Culture>
                   <Text>call simulation</Text>
@@ -1171,15 +1211,15 @@
           </MultilingualText>
         </ObjectList>
       </SW.Blocks.CompileUnit>
-      <MultilingualText ID="20" CompositionName="Title">
+      <MultilingualText ID="27" CompositionName="Title">
         <ObjectList>
-          <MultilingualTextItem ID="21" CompositionName="Items">
+          <MultilingualTextItem ID="28" CompositionName="Items">
             <AttributeList>
               <Culture>de-DE</Culture>
               <Text>"Main Program Sweep (Cycle)"</Text>
             </AttributeList>
           </MultilingualTextItem>
-          <MultilingualTextItem ID="22" CompositionName="Items">
+          <MultilingualTextItem ID="29" CompositionName="Items">
             <AttributeList>
               <Culture>en-US</Culture>
               <Text>"Main Program Sweep (Cycle)"</Text>
