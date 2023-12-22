@@ -1,0 +1,3050 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V18" />
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AcknowledgeErrorsRequired>true</AcknowledgeErrorsRequired>
+      <AutoNumber>true</AutoNumber>
+      <ExtensionBlockName />
+      <GraphVersion>6.0</GraphVersion>
+      <HeaderAuthor>dda</HeaderAuthor>
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <InitialValuesAcquisition>false</InitialValuesAcquisition>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Base">
+    <Sections Datatype="GRAPH_BASE" Version="1.0">
+      <Section Name="Input" />
+      <Section Name="Output" />
+      <Section Name="InOut" />
+      <Section Name="Static">
+        <Member Name="OFF_SQ_BASE" Datatype="Bool" />
+      </Section>
+    </Sections>
+  </Section>
+  <Section Name="Input">
+    <Member Name="OFF_SQ" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Turn sequence off</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Turn sequence off</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="INIT_SQ" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Set sequence to initial state</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set sequence to initial state</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="ACK_EF" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Acknowledge all errors and faults</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Acknowledge all errors and faults</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="REG_EF" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Register all errors and faults</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Register all errors and faults</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="ACK_S" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Acknowledge step indicated in S_NO</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Acknowledge step indicated in S_NO</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="REG_S" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Register the step indicated in S_NO</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Register the step indicated in S_NO</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="HALT_SQ" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Halt sequence immediately</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Halt sequence immediately</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="HALT_TM" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Halt timers immediately</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Halt timers immediately</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="ZERO_OP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Set all operands assigned with N, L, D to 0</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set all operands assigned with N, L, D to 0</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="EN_IL" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Enable interlocks</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Enable interlocks</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="EN_SV" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Activate supervision processing</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Activate supervision processing</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="EN_ACKREQ" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Activate mandatory acknowledgment</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Activate mandatory acknowledgment</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="EN_SSKIP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Enable "Skip step"</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Enable "Skip step"</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="DISP_SACT" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Display active steps only</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Display active steps only</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="DISP_SEF" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Display only steps with errors and disrupted steps</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Display only steps with errors and disrupted steps</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="DISP_SALL" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Display all steps</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Display all steps</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="S_PREV" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Output previous step in parameter S_NO</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Output previous step in parameter S_NO</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="S_NEXT" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Indicate next step in parameter S_NO</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Indicate next step in parameter S_NO</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="SW_AUTO" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Automatic mode</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Automatic mode</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="SW_TAP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Semiautomatic/switch with transition</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Semiautomatic/switch with transition</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="SW_TOP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Semiautomatic/ignore transition</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Semiautomatic/ignore transition</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="SW_MAN" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Manual mode</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Manual mode</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="S_SEL" Datatype="Int" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Select step to be output to S_NO</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Select step to be output to S_NO</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">0</StartValue>
+    </Member>
+    <Member Name="S_SELOK" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Enter value from S_SEL in S_NO</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Enter value from S_SEL in S_NO</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="S_ON" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Activate step indicated in S_NO</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Activate step indicated in S_NO</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="S_OFF" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Disable step indicated in S_NO</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Disable step indicated in S_NO</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="T_PREV" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Display previous transition in T_NO</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Display previous transition in T_NO</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="T_NEXT" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Display next transition at parameter T_NO</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Display next transition at parameter T_NO</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="T_PUSH" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Enable transition to switch in semi automatic mode</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Enable transition to switch in semi automatic mode</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="EN_LMODE" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Activate learning mode</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Activate learning mode</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="RESET_CRIT" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Reset all initial values recorded for interlocks and transitions</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Reset all initial values recorded for interlocks and transitions</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="startButton" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="lightBeam1" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="lightBeam2" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="lightBeam3" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="robotArmDown" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="robotOnStation" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="robotOnMagazine" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="mySupervision" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="Output">
+    <Member Name="S_NO" Datatype="Int" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Step number</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Step number</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">0</StartValue>
+    </Member>
+    <Member Name="S_MORE" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">More steps are available and can be shown in S_NO</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">More steps are available and can be shown in S_NO</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="S_ACTIVE" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Step indicated in S_NO is active</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Step indicated in S_NO is active</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="S_TIME" Datatype="Time" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Step activation time</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Step activation time</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">T#0ms</StartValue>
+    </Member>
+    <Member Name="S_TIMEOK" Datatype="Time" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">No error in step activation time</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">No error in step activation time</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">T#0ms</StartValue>
+    </Member>
+    <Member Name="S_CRITLOC" Datatype="DWord" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Interlock criteria bits</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Interlock criteria bits</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">16#0</StartValue>
+    </Member>
+    <Member Name="S_CRITLOCERR" Datatype="DWord" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Interlock criteria bits for event L1</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Interlock criteria bits for event L1</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">16#0</StartValue>
+    </Member>
+    <Member Name="S_STATE" Datatype="Word" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Step state bits</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Step state bits</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">16#0</StartValue>
+    </Member>
+    <Member Name="T_NO" Datatype="Int" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Transition number</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Transition number</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">0</StartValue>
+    </Member>
+    <Member Name="T_MORE" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">More valid transitions available for display</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">More valid transitions available for display</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="T_CRIT" Datatype="DWord" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Transition criteria bits</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Transition criteria bits</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">16#0</StartValue>
+    </Member>
+    <Member Name="T_CRITOLD" Datatype="DWord" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Transition criteria bits from last cycle</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Transition criteria bits from last cycle</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">16#0</StartValue>
+    </Member>
+    <Member Name="T_CRITFLT" Datatype="DWord" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Transition criteria bits for event V1</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Transition criteria bits for event V1</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">16#0</StartValue>
+    </Member>
+    <Member Name="ERROR" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Interlock group error</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Interlock group error</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="FAULT" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Supervision group error</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Supervision group error</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="ERR_FLT" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Interlock or supervision group error</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Interlock or supervision group error</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="SQ_ISOFF" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Sequence is off (no step active)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Sequence is off (no step active)</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="SQ_HALTED" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Sequence halted</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Sequence halted</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="TM_HALTED" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Timers halted</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Timers halted</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="OP_ZEROED" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">All the operands assigned with N, L, D are set to 0</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">All the operands assigned with N, L, D are set to 0</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="IL_ENABLED" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Interlocks are active</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Interlocks are active</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="SV_ENABLED" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Supervision processing activated</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Supervision processing activated</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="ACKREQ_ENABLED" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Mandatory acknowledgment activated</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Mandatory acknowledgment activated</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="SSKIP_ENABLED" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Skip steps activated</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Skip steps activated</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="SACT_DISP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Display active steps only</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Display active steps only</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="SEF_DISP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Display only steps with errors or disrupted steps</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Display only steps with errors or disrupted steps</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="SALL_DISP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Display all steps</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Display all steps</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="AUTO_ON" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Automatic mode is active</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Automatic mode is active</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="TAP_ON" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Semiautomatic mode/step with transition enabled</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Semiautomatic mode/step with transition enabled</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="TOP_ON" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Semiautomatic mode/ignore transition enabled</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Semiautomatic mode/ignore transition enabled</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="MAN_ON" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Manual mode is active</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Manual mode is active</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="LMODE_ENABLED" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Learning mode is active</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Learning mode is active</MultiLanguageText>
+      </Comment>
+      <StartValue Informative="true">false</StartValue>
+    </Member>
+    <Member Name="partInPos1" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="partInPos2" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="partInPos3" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="startConv" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="automaticMode" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="robotFill" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="robotGoToMagazine" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="robotGoToStation" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="statLightbeam3Fal" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="statMemoryTag" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="RT_DATA" Datatype="G7_RTDataPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Internal data area</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Internal data area</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="VERSION" Datatype="String[10]">
+            <StartValue Informative="true">'V6.0'</StartValue>
+          </Member>
+          <Member Name="S_DISPLAY" Datatype="Int" />
+          <Member Name="S_SEL_OLD" Datatype="Int" />
+          <Member Name="S_DISPIDX" Datatype="USInt">
+            <StartValue Informative="true">255</StartValue>
+          </Member>
+          <Member Name="T_DISPIDX" Datatype="USInt">
+            <StartValue Informative="true">255</StartValue>
+          </Member>
+          <Member Name="MOP_EDGE" Datatype="G7_MOPPlus_V6" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="AUTO" Datatype="Bool" />
+                <Member Name="MAN" Datatype="Bool" />
+                <Member Name="TAP" Datatype="Bool" />
+                <Member Name="TOP" Datatype="Bool" />
+                <Member Name="ACK_S" Datatype="Bool" />
+                <Member Name="REG_S" Datatype="Bool" />
+                <Member Name="T_PREV" Datatype="Bool" />
+                <Member Name="T_NEXT" Datatype="Bool" />
+                <Member Name="LOCK" Datatype="Bool" />
+                <Member Name="SUP" Datatype="Bool" />
+                <Member Name="ACKREQ" Datatype="Bool" />
+                <Member Name="SSKIP" Datatype="Bool" />
+                <Member Name="OFF" Datatype="Bool" />
+                <Member Name="INIT" Datatype="Bool" />
+                <Member Name="HALT" Datatype="Bool" />
+                <Member Name="TMS_HALT" Datatype="Bool" />
+                <Member Name="OPS_ZERO" Datatype="Bool" />
+                <Member Name="SACT_DISP" Datatype="Bool" />
+                <Member Name="SEF_DISP" Datatype="Bool" />
+                <Member Name="SALL_DISP" Datatype="Bool" />
+                <Member Name="S_PREV" Datatype="Bool" />
+                <Member Name="S_NEXT" Datatype="Bool" />
+                <Member Name="S_SELOK" Datatype="Bool" />
+                <Member Name="S_ON" Datatype="Bool" />
+                <Member Name="S_OFF" Datatype="Bool" />
+                <Member Name="T_PUSH" Datatype="Bool" />
+                <Member Name="REG" Datatype="Bool" />
+                <Member Name="ACK" Datatype="Bool" />
+                <Member Name="IL_PERM" Datatype="Bool" />
+                <Member Name="T_PERM" Datatype="Bool" />
+                <Member Name="ILP_MAN" Datatype="Bool" />
+                <Member Name="LMODE" Datatype="Bool" />
+                <Member Name="RESET_CRIT" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="MOP" Datatype="G7_MOPPlus_V6" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="AUTO" Datatype="Bool">
+                  <StartValue Informative="true">true</StartValue>
+                </Member>
+                <Member Name="MAN" Datatype="Bool" />
+                <Member Name="TAP" Datatype="Bool" />
+                <Member Name="TOP" Datatype="Bool" />
+                <Member Name="ACK_S" Datatype="Bool" />
+                <Member Name="REG_S" Datatype="Bool" />
+                <Member Name="T_PREV" Datatype="Bool" />
+                <Member Name="T_NEXT" Datatype="Bool" />
+                <Member Name="LOCK" Datatype="Bool">
+                  <StartValue Informative="true">true</StartValue>
+                </Member>
+                <Member Name="SUP" Datatype="Bool">
+                  <StartValue Informative="true">true</StartValue>
+                </Member>
+                <Member Name="ACKREQ" Datatype="Bool">
+                  <StartValue Informative="true">true</StartValue>
+                </Member>
+                <Member Name="SSKIP" Datatype="Bool" />
+                <Member Name="OFF" Datatype="Bool" />
+                <Member Name="INIT" Datatype="Bool">
+                  <StartValue Informative="true">true</StartValue>
+                </Member>
+                <Member Name="HALT" Datatype="Bool" />
+                <Member Name="TMS_HALT" Datatype="Bool" />
+                <Member Name="OPS_ZERO" Datatype="Bool" />
+                <Member Name="SACT_DISP" Datatype="Bool">
+                  <StartValue Informative="true">true</StartValue>
+                </Member>
+                <Member Name="SEF_DISP" Datatype="Bool" />
+                <Member Name="SALL_DISP" Datatype="Bool" />
+                <Member Name="S_PREV" Datatype="Bool" />
+                <Member Name="S_NEXT" Datatype="Bool" />
+                <Member Name="S_SELOK" Datatype="Bool" />
+                <Member Name="S_ON" Datatype="Bool" />
+                <Member Name="S_OFF" Datatype="Bool" />
+                <Member Name="T_PUSH" Datatype="Bool" />
+                <Member Name="REG" Datatype="Bool" />
+                <Member Name="ACK" Datatype="Bool" />
+                <Member Name="IL_PERM" Datatype="Bool" />
+                <Member Name="T_PERM" Datatype="Bool" />
+                <Member Name="ILP_MAN" Datatype="Bool" />
+                <Member Name="LMODE" Datatype="Bool" />
+                <Member Name="RESET_CRIT" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="TIME_DELTA" Datatype="Time" />
+          <Member Name="SQ_FLAGS" Datatype="G7_SQFlagsPlus_V6" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="ERR_FLT" Datatype="Bool" />
+                <Member Name="ERROR" Datatype="Bool" />
+                <Member Name="FAULT" Datatype="Bool" />
+                <Member Name="RT_FAIL" Datatype="Bool" />
+                <Member Name="NO_SNO" Datatype="Bool" />
+                <Member Name="NF_OFL" Datatype="Bool" />
+                <Member Name="SA_OFL" Datatype="Bool" />
+                <Member Name="TV_OFL" Datatype="Bool" />
+                <Member Name="NO_SWI" Datatype="Bool" />
+                <Member Name="CYC_OP" Datatype="Bool" />
+                <Member Name="AS_MSG" Datatype="Bool">
+                  <StartValue Informative="true">true</StartValue>
+                </Member>
+                <Member Name="SQ_BUSY" Datatype="Bool" />
+                <Member Name="SA_BUSY" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="PRE_CNT" Datatype="USInt">
+            <StartValue Informative="true">1</StartValue>
+          </Member>
+          <Member Name="POST_CNT" Datatype="USInt">
+            <StartValue Informative="true">1</StartValue>
+          </Member>
+          <Member Name="SQ_CNT" Datatype="USInt">
+            <StartValue Informative="true">1</StartValue>
+          </Member>
+          <Member Name="S_CNT" Datatype="USInt">
+            <StartValue Informative="true">9</StartValue>
+          </Member>
+          <Member Name="LOCK_CNT" Datatype="USInt">
+            <StartValue Informative="true">2</StartValue>
+          </Member>
+          <Member Name="SUP_CNT" Datatype="USInt">
+            <StartValue Informative="true">2</StartValue>
+          </Member>
+          <Member Name="T_CNT" Datatype="USInt">
+            <StartValue Informative="true">9</StartValue>
+          </Member>
+          <Member Name="SQ_PART_CNT" Datatype="USInt">
+            <StartValue Informative="true">3</StartValue>
+          </Member>
+          <Member Name="MAX_TVAL" Datatype="USInt">
+            <StartValue Informative="true">5</StartValue>
+          </Member>
+          <Member Name="MAX_SACT" Datatype="USInt">
+            <StartValue Informative="true">3</StartValue>
+          </Member>
+          <Member Name="AS_MSG" Datatype="Byte">
+            <StartValue Informative="true">16#65</StartValue>
+          </Member>
+          <Member Name="EXEC_BITS" Datatype="Array[0..249] of Bool" />
+          <Member Name="OFFSETS" Datatype="G7_OffsetsPlus_V6" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="SINI_OFFSET" Datatype="UInt" />
+                <Member Name="LSTT_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">4</StartValue>
+                </Member>
+                <Member Name="ATAJ_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">13</StartValue>
+                </Member>
+                <Member Name="ATAB_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">22</StartValue>
+                </Member>
+                <Member Name="PSTT_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">31</StartValue>
+                </Member>
+                <Member Name="NSTT_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">40</StartValue>
+                </Member>
+                <Member Name="ASSJ_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">49</StartValue>
+                </Member>
+                <Member Name="ASSB_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">58</StartValue>
+                </Member>
+                <Member Name="PTTS_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">67</StartValue>
+                </Member>
+                <Member Name="NTTS_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">76</StartValue>
+                </Member>
+                <Member Name="SW_SQTS_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">85</StartValue>
+                </Member>
+                <Member Name="SWITCH_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">94</StartValue>
+                </Member>
+                <Member Name="TVX_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">96</StartValue>
+                </Member>
+                <Member Name="TTX_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">102</StartValue>
+                </Member>
+                <Member Name="TSX_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">108</StartValue>
+                </Member>
+                <Member Name="S00X_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">112</StartValue>
+                </Member>
+                <Member Name="SOFFX_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">116</StartValue>
+                </Member>
+                <Member Name="SONX_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">120</StartValue>
+                </Member>
+                <Member Name="SAX_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">124</StartValue>
+                </Member>
+                <Member Name="SERRX_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">128</StartValue>
+                </Member>
+                <Member Name="SMX_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">138</StartValue>
+                </Member>
+                <Member Name="S0X_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">148</StartValue>
+                </Member>
+                <Member Name="S1X_OFFSET" Datatype="UInt">
+                  <StartValue Informative="true">158</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="THRESHOLD_SUP" Datatype="USInt" />
+          <Member Name="THRESHOLD_WARN" Datatype="USInt" />
+          <Member Name="GC_FLAGS" Datatype="G7_GCFlagsPlus_V6" Version="1.0">
+            <Sections>
+              <Section Name="None">
+                <Member Name="COND_ED" Datatype="USInt">
+                  <StartValue Informative="true">16#E2</StartValue>
+                </Member>
+                <Member Name="SSKIP_ON" Datatype="Bool" />
+                <Member Name="ACK_REQ" Datatype="Bool">
+                  <StartValue Informative="true">true</StartValue>
+                </Member>
+                <Member Name="ILP_MAN" Datatype="Bool" />
+                <Member Name="SWM_LOCKED" Datatype="Bool" />
+                <Member Name="SET_ENO" Datatype="Bool">
+                  <StartValue Informative="true">true</StartValue>
+                </Member>
+                <Member Name="IL_CAT" Datatype="USInt">
+                  <StartValue Informative="true">1</StartValue>
+                </Member>
+                <Member Name="IL_SUBCAT_1" Datatype="USInt" />
+                <Member Name="IL_SUBCAT_2" Datatype="USInt" />
+                <Member Name="REACT_CAT" Datatype="USInt">
+                  <StartValue Informative="true">1</StartValue>
+                </Member>
+                <Member Name="REACT_SUBCAT_1" Datatype="USInt" />
+                <Member Name="REACT_SUBCAT_2" Datatype="USInt" />
+                <Member Name="WARN_CAT" Datatype="USInt">
+                  <StartValue Informative="true">2</StartValue>
+                </Member>
+                <Member Name="WARN_SUBCAT_1" Datatype="USInt" />
+                <Member Name="WARN_SUBCAT_2" Datatype="USInt" />
+                <Member Name="CRIT_ON" Datatype="Bool" />
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="Trans1" Datatype="G7_TransitionPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Transition structure</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Transition structure</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="TV" Datatype="Bool" />
+          <Member Name="TT" Datatype="Bool" />
+          <Member Name="TS" Datatype="Bool" />
+          <Member Name="TNO" Datatype="Int">
+            <StartValue Informative="true">1</StartValue>
+          </Member>
+          <Member Name="CRIT" Datatype="DWord" />
+          <Member Name="CRIT_OLD" Datatype="DWord" />
+          <Member Name="CRIT_FLT" Datatype="DWord" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="Trans2" Datatype="G7_TransitionPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Transition structure</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Transition structure</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="TV" Datatype="Bool" />
+          <Member Name="TT" Datatype="Bool" />
+          <Member Name="TS" Datatype="Bool" />
+          <Member Name="TNO" Datatype="Int">
+            <StartValue Informative="true">2</StartValue>
+          </Member>
+          <Member Name="CRIT" Datatype="DWord" />
+          <Member Name="CRIT_OLD" Datatype="DWord" />
+          <Member Name="CRIT_FLT" Datatype="DWord" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="Trans3" Datatype="G7_TransitionPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Transition structure</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Transition structure</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="TV" Datatype="Bool" />
+          <Member Name="TT" Datatype="Bool" />
+          <Member Name="TS" Datatype="Bool" />
+          <Member Name="TNO" Datatype="Int">
+            <StartValue Informative="true">3</StartValue>
+          </Member>
+          <Member Name="CRIT" Datatype="DWord" />
+          <Member Name="CRIT_OLD" Datatype="DWord" />
+          <Member Name="CRIT_FLT" Datatype="DWord" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="Trans4" Datatype="G7_TransitionPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Transition structure</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Transition structure</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="TV" Datatype="Bool" />
+          <Member Name="TT" Datatype="Bool" />
+          <Member Name="TS" Datatype="Bool" />
+          <Member Name="TNO" Datatype="Int">
+            <StartValue Informative="true">4</StartValue>
+          </Member>
+          <Member Name="CRIT" Datatype="DWord" />
+          <Member Name="CRIT_OLD" Datatype="DWord" />
+          <Member Name="CRIT_FLT" Datatype="DWord" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="Trans5" Datatype="G7_TransitionPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Transition structure</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Transition structure</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="TV" Datatype="Bool" />
+          <Member Name="TT" Datatype="Bool" />
+          <Member Name="TS" Datatype="Bool" />
+          <Member Name="TNO" Datatype="Int">
+            <StartValue Informative="true">5</StartValue>
+          </Member>
+          <Member Name="CRIT" Datatype="DWord" />
+          <Member Name="CRIT_OLD" Datatype="DWord" />
+          <Member Name="CRIT_FLT" Datatype="DWord" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="Trans6" Datatype="G7_TransitionPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Transition structure</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Transition structure</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="TV" Datatype="Bool" />
+          <Member Name="TT" Datatype="Bool" />
+          <Member Name="TS" Datatype="Bool" />
+          <Member Name="TNO" Datatype="Int">
+            <StartValue Informative="true">6</StartValue>
+          </Member>
+          <Member Name="CRIT" Datatype="DWord" />
+          <Member Name="CRIT_OLD" Datatype="DWord" />
+          <Member Name="CRIT_FLT" Datatype="DWord" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="Return" Datatype="G7_TransitionPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Transition structure</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Transition structure</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="TV" Datatype="Bool" />
+          <Member Name="TT" Datatype="Bool" />
+          <Member Name="TS" Datatype="Bool" />
+          <Member Name="TNO" Datatype="Int">
+            <StartValue Informative="true">7</StartValue>
+          </Member>
+          <Member Name="CRIT" Datatype="DWord" />
+          <Member Name="CRIT_OLD" Datatype="DWord" />
+          <Member Name="CRIT_FLT" Datatype="DWord" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="BackTo" Datatype="G7_TransitionPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Transition structure</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Transition structure</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="TV" Datatype="Bool" />
+          <Member Name="TT" Datatype="Bool" />
+          <Member Name="TS" Datatype="Bool" />
+          <Member Name="TNO" Datatype="Int">
+            <StartValue Informative="true">8</StartValue>
+          </Member>
+          <Member Name="CRIT" Datatype="DWord" />
+          <Member Name="CRIT_OLD" Datatype="DWord" />
+          <Member Name="CRIT_FLT" Datatype="DWord" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="Trans9" Datatype="G7_TransitionPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Transition structure</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Transition structure</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="TV" Datatype="Bool" />
+          <Member Name="TT" Datatype="Bool" />
+          <Member Name="TS" Datatype="Bool" />
+          <Member Name="TNO" Datatype="Int">
+            <StartValue Informative="true">9</StartValue>
+          </Member>
+          <Member Name="CRIT" Datatype="DWord" />
+          <Member Name="CRIT_OLD" Datatype="DWord" />
+          <Member Name="CRIT_FLT" Datatype="DWord" />
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="BasicPosition" Datatype="G7_StepPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Step structure</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Step structure</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="S1" Datatype="Bool" />
+          <Member Name="L1" Datatype="Bool" />
+          <Member Name="V1" Datatype="Bool" />
+          <Member Name="R1" Datatype="Bool" />
+          <Member Name="A1" Datatype="Bool" />
+          <Member Name="S0" Datatype="Bool" />
+          <Member Name="L0" Datatype="Bool" />
+          <Member Name="V0" Datatype="Bool" />
+          <Member Name="X" Datatype="Bool" />
+          <Member Name="LA" Datatype="Bool" />
+          <Member Name="VA" Datatype="Bool" />
+          <Member Name="RA" Datatype="Bool" />
+          <Member Name="AA" Datatype="Bool" />
+          <Member Name="SS" Datatype="Bool" />
+          <Member Name="LS" Datatype="Bool" />
+          <Member Name="VS" Datatype="Bool" />
+          <Member Name="SNO" Datatype="Int">
+            <StartValue Informative="true">1</StartValue>
+          </Member>
+          <Member Name="T" Datatype="Time" />
+          <Member Name="U" Datatype="Time" />
+          <Member Name="T_MAX" Datatype="Time">
+            <StartValue Informative="true">T#10S</StartValue>
+          </Member>
+          <Member Name="T_WARN" Datatype="Time">
+            <StartValue Informative="true">T#7S</StartValue>
+          </Member>
+          <Member Name="CRIT_LOC" Datatype="DWord" />
+          <Member Name="CRIT_LOC_ERR" Datatype="DWord" />
+          <Member Name="SM" Datatype="Bool" />
+          <Member Name="H_IL_ERR" Datatype="Byte" />
+          <Member Name="H_SV_FLT" Datatype="Byte">
+            <StartValue Informative="true">16#04</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="StartConveyor" Datatype="G7_StepPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Step structure</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Step structure</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="S1" Datatype="Bool" />
+          <Member Name="L1" Datatype="Bool" />
+          <Member Name="V1" Datatype="Bool" />
+          <Member Name="R1" Datatype="Bool" />
+          <Member Name="A1" Datatype="Bool" />
+          <Member Name="S0" Datatype="Bool" />
+          <Member Name="L0" Datatype="Bool" />
+          <Member Name="V0" Datatype="Bool" />
+          <Member Name="X" Datatype="Bool" />
+          <Member Name="LA" Datatype="Bool" />
+          <Member Name="VA" Datatype="Bool" />
+          <Member Name="RA" Datatype="Bool" />
+          <Member Name="AA" Datatype="Bool" />
+          <Member Name="SS" Datatype="Bool" />
+          <Member Name="LS" Datatype="Bool" />
+          <Member Name="VS" Datatype="Bool" />
+          <Member Name="SNO" Datatype="Int">
+            <StartValue Informative="true">2</StartValue>
+          </Member>
+          <Member Name="T" Datatype="Time" />
+          <Member Name="U" Datatype="Time" />
+          <Member Name="T_MAX" Datatype="Time">
+            <StartValue Informative="true">T#10S</StartValue>
+          </Member>
+          <Member Name="T_WARN" Datatype="Time">
+            <StartValue Informative="true">T#7S</StartValue>
+          </Member>
+          <Member Name="CRIT_LOC" Datatype="DWord" />
+          <Member Name="CRIT_LOC_ERR" Datatype="DWord" />
+          <Member Name="SM" Datatype="Bool" />
+          <Member Name="H_IL_ERR" Datatype="Byte" />
+          <Member Name="H_SV_FLT" Datatype="Byte">
+            <StartValue Informative="true">16#04</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="MovePart" Datatype="G7_StepPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Step structure</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Step structure</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="S1" Datatype="Bool" />
+          <Member Name="L1" Datatype="Bool" />
+          <Member Name="V1" Datatype="Bool" />
+          <Member Name="R1" Datatype="Bool" />
+          <Member Name="A1" Datatype="Bool" />
+          <Member Name="S0" Datatype="Bool" />
+          <Member Name="L0" Datatype="Bool" />
+          <Member Name="V0" Datatype="Bool" />
+          <Member Name="X" Datatype="Bool" />
+          <Member Name="LA" Datatype="Bool" />
+          <Member Name="VA" Datatype="Bool" />
+          <Member Name="RA" Datatype="Bool" />
+          <Member Name="AA" Datatype="Bool" />
+          <Member Name="SS" Datatype="Bool" />
+          <Member Name="LS" Datatype="Bool" />
+          <Member Name="VS" Datatype="Bool" />
+          <Member Name="SNO" Datatype="Int">
+            <StartValue Informative="true">3</StartValue>
+          </Member>
+          <Member Name="T" Datatype="Time" />
+          <Member Name="U" Datatype="Time" />
+          <Member Name="T_MAX" Datatype="Time">
+            <StartValue Informative="true">T#10S</StartValue>
+          </Member>
+          <Member Name="T_WARN" Datatype="Time">
+            <StartValue Informative="true">T#7S</StartValue>
+          </Member>
+          <Member Name="CRIT_LOC" Datatype="DWord" />
+          <Member Name="CRIT_LOC_ERR" Datatype="DWord" />
+          <Member Name="SM" Datatype="Bool" />
+          <Member Name="H_IL_ERR" Datatype="Byte" />
+          <Member Name="H_SV_FLT" Datatype="Byte">
+            <StartValue Informative="true">16#04</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="GoToStation" Datatype="G7_StepPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Step structure</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Step structure</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="S1" Datatype="Bool" />
+          <Member Name="L1" Datatype="Bool" />
+          <Member Name="V1" Datatype="Bool" />
+          <Member Name="R1" Datatype="Bool" />
+          <Member Name="A1" Datatype="Bool" />
+          <Member Name="S0" Datatype="Bool" />
+          <Member Name="L0" Datatype="Bool" />
+          <Member Name="V0" Datatype="Bool" />
+          <Member Name="X" Datatype="Bool" />
+          <Member Name="LA" Datatype="Bool" />
+          <Member Name="VA" Datatype="Bool" />
+          <Member Name="RA" Datatype="Bool" />
+          <Member Name="AA" Datatype="Bool" />
+          <Member Name="SS" Datatype="Bool" />
+          <Member Name="LS" Datatype="Bool" />
+          <Member Name="VS" Datatype="Bool" />
+          <Member Name="SNO" Datatype="Int">
+            <StartValue Informative="true">4</StartValue>
+          </Member>
+          <Member Name="T" Datatype="Time" />
+          <Member Name="U" Datatype="Time" />
+          <Member Name="T_MAX" Datatype="Time">
+            <StartValue Informative="true">T#10S</StartValue>
+          </Member>
+          <Member Name="T_WARN" Datatype="Time">
+            <StartValue Informative="true">T#7S</StartValue>
+          </Member>
+          <Member Name="CRIT_LOC" Datatype="DWord" />
+          <Member Name="CRIT_LOC_ERR" Datatype="DWord" />
+          <Member Name="SM" Datatype="Bool" />
+          <Member Name="H_IL_ERR" Datatype="Byte" />
+          <Member Name="H_SV_FLT" Datatype="Byte">
+            <StartValue Informative="true">16#04</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="Fill" Datatype="G7_StepPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Step structure</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Step structure</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="S1" Datatype="Bool" />
+          <Member Name="L1" Datatype="Bool" />
+          <Member Name="V1" Datatype="Bool" />
+          <Member Name="R1" Datatype="Bool" />
+          <Member Name="A1" Datatype="Bool" />
+          <Member Name="S0" Datatype="Bool" />
+          <Member Name="L0" Datatype="Bool" />
+          <Member Name="V0" Datatype="Bool" />
+          <Member Name="X" Datatype="Bool" />
+          <Member Name="LA" Datatype="Bool" />
+          <Member Name="VA" Datatype="Bool" />
+          <Member Name="RA" Datatype="Bool" />
+          <Member Name="AA" Datatype="Bool" />
+          <Member Name="SS" Datatype="Bool" />
+          <Member Name="LS" Datatype="Bool" />
+          <Member Name="VS" Datatype="Bool" />
+          <Member Name="SNO" Datatype="Int">
+            <StartValue Informative="true">5</StartValue>
+          </Member>
+          <Member Name="T" Datatype="Time" />
+          <Member Name="U" Datatype="Time" />
+          <Member Name="T_MAX" Datatype="Time">
+            <StartValue Informative="true">T#10S</StartValue>
+          </Member>
+          <Member Name="T_WARN" Datatype="Time">
+            <StartValue Informative="true">T#7S</StartValue>
+          </Member>
+          <Member Name="CRIT_LOC" Datatype="DWord" />
+          <Member Name="CRIT_LOC_ERR" Datatype="DWord" />
+          <Member Name="SM" Datatype="Bool" />
+          <Member Name="H_IL_ERR" Datatype="Byte" />
+          <Member Name="H_SV_FLT" Datatype="Byte">
+            <StartValue Informative="true">16#04</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="GoToMagazine" Datatype="G7_StepPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Step structure</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Step structure</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="S1" Datatype="Bool" />
+          <Member Name="L1" Datatype="Bool" />
+          <Member Name="V1" Datatype="Bool" />
+          <Member Name="R1" Datatype="Bool" />
+          <Member Name="A1" Datatype="Bool" />
+          <Member Name="S0" Datatype="Bool" />
+          <Member Name="L0" Datatype="Bool" />
+          <Member Name="V0" Datatype="Bool" />
+          <Member Name="X" Datatype="Bool" />
+          <Member Name="LA" Datatype="Bool" />
+          <Member Name="VA" Datatype="Bool" />
+          <Member Name="RA" Datatype="Bool" />
+          <Member Name="AA" Datatype="Bool" />
+          <Member Name="SS" Datatype="Bool" />
+          <Member Name="LS" Datatype="Bool" />
+          <Member Name="VS" Datatype="Bool" />
+          <Member Name="SNO" Datatype="Int">
+            <StartValue Informative="true">6</StartValue>
+          </Member>
+          <Member Name="T" Datatype="Time" />
+          <Member Name="U" Datatype="Time" />
+          <Member Name="T_MAX" Datatype="Time">
+            <StartValue Informative="true">T#10S</StartValue>
+          </Member>
+          <Member Name="T_WARN" Datatype="Time">
+            <StartValue Informative="true">T#7S</StartValue>
+          </Member>
+          <Member Name="CRIT_LOC" Datatype="DWord" />
+          <Member Name="CRIT_LOC_ERR" Datatype="DWord" />
+          <Member Name="SM" Datatype="Bool" />
+          <Member Name="H_IL_ERR" Datatype="Byte" />
+          <Member Name="H_SV_FLT" Datatype="Byte">
+            <StartValue Informative="true">16#04</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="RemovePart" Datatype="G7_StepPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Step structure</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Step structure</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="S1" Datatype="Bool" />
+          <Member Name="L1" Datatype="Bool" />
+          <Member Name="V1" Datatype="Bool" />
+          <Member Name="R1" Datatype="Bool" />
+          <Member Name="A1" Datatype="Bool" />
+          <Member Name="S0" Datatype="Bool" />
+          <Member Name="L0" Datatype="Bool" />
+          <Member Name="V0" Datatype="Bool" />
+          <Member Name="X" Datatype="Bool" />
+          <Member Name="LA" Datatype="Bool" />
+          <Member Name="VA" Datatype="Bool" />
+          <Member Name="RA" Datatype="Bool" />
+          <Member Name="AA" Datatype="Bool" />
+          <Member Name="SS" Datatype="Bool" />
+          <Member Name="LS" Datatype="Bool" />
+          <Member Name="VS" Datatype="Bool" />
+          <Member Name="SNO" Datatype="Int">
+            <StartValue Informative="true">7</StartValue>
+          </Member>
+          <Member Name="T" Datatype="Time" />
+          <Member Name="U" Datatype="Time" />
+          <Member Name="T_MAX" Datatype="Time">
+            <StartValue Informative="true">T#10S</StartValue>
+          </Member>
+          <Member Name="T_WARN" Datatype="Time">
+            <StartValue Informative="true">T#7S</StartValue>
+          </Member>
+          <Member Name="CRIT_LOC" Datatype="DWord" />
+          <Member Name="CRIT_LOC_ERR" Datatype="DWord" />
+          <Member Name="SM" Datatype="Bool" />
+          <Member Name="H_IL_ERR" Datatype="Byte" />
+          <Member Name="H_SV_FLT" Datatype="Byte">
+            <StartValue Informative="true">16#04</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="ResetConveyor" Datatype="G7_StepPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Step structure</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Step structure</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="S1" Datatype="Bool" />
+          <Member Name="L1" Datatype="Bool" />
+          <Member Name="V1" Datatype="Bool" />
+          <Member Name="R1" Datatype="Bool" />
+          <Member Name="A1" Datatype="Bool" />
+          <Member Name="S0" Datatype="Bool" />
+          <Member Name="L0" Datatype="Bool" />
+          <Member Name="V0" Datatype="Bool" />
+          <Member Name="X" Datatype="Bool" />
+          <Member Name="LA" Datatype="Bool" />
+          <Member Name="VA" Datatype="Bool" />
+          <Member Name="RA" Datatype="Bool" />
+          <Member Name="AA" Datatype="Bool" />
+          <Member Name="SS" Datatype="Bool" />
+          <Member Name="LS" Datatype="Bool" />
+          <Member Name="VS" Datatype="Bool" />
+          <Member Name="SNO" Datatype="Int">
+            <StartValue Informative="true">8</StartValue>
+          </Member>
+          <Member Name="T" Datatype="Time" />
+          <Member Name="U" Datatype="Time" />
+          <Member Name="T_MAX" Datatype="Time">
+            <StartValue Informative="true">T#10S</StartValue>
+          </Member>
+          <Member Name="T_WARN" Datatype="Time">
+            <StartValue Informative="true">T#7S</StartValue>
+          </Member>
+          <Member Name="CRIT_LOC" Datatype="DWord" />
+          <Member Name="CRIT_LOC_ERR" Datatype="DWord" />
+          <Member Name="SM" Datatype="Bool" />
+          <Member Name="H_IL_ERR" Datatype="Byte" />
+          <Member Name="H_SV_FLT" Datatype="Byte">
+            <StartValue Informative="true">16#04</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="ResetPositions" Datatype="G7_StepPlus_V6" Version="1.0" Remanence="NonRetain" Accessibility="Public">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" Informative="true" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment Informative="true">
+        <MultiLanguageText Lang="de-DE">Step structure</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Step structure</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="S1" Datatype="Bool" />
+          <Member Name="L1" Datatype="Bool" />
+          <Member Name="V1" Datatype="Bool" />
+          <Member Name="R1" Datatype="Bool" />
+          <Member Name="A1" Datatype="Bool" />
+          <Member Name="S0" Datatype="Bool" />
+          <Member Name="L0" Datatype="Bool" />
+          <Member Name="V0" Datatype="Bool" />
+          <Member Name="X" Datatype="Bool" />
+          <Member Name="LA" Datatype="Bool" />
+          <Member Name="VA" Datatype="Bool" />
+          <Member Name="RA" Datatype="Bool" />
+          <Member Name="AA" Datatype="Bool" />
+          <Member Name="SS" Datatype="Bool" />
+          <Member Name="LS" Datatype="Bool" />
+          <Member Name="VS" Datatype="Bool" />
+          <Member Name="SNO" Datatype="Int">
+            <StartValue Informative="true">9</StartValue>
+          </Member>
+          <Member Name="T" Datatype="Time" />
+          <Member Name="U" Datatype="Time" />
+          <Member Name="T_MAX" Datatype="Time">
+            <StartValue Informative="true">T#10S</StartValue>
+          </Member>
+          <Member Name="T_WARN" Datatype="Time">
+            <StartValue Informative="true">T#7S</StartValue>
+          </Member>
+          <Member Name="CRIT_LOC" Datatype="DWord" />
+          <Member Name="CRIT_LOC_ERR" Datatype="DWord" />
+          <Member Name="SM" Datatype="Bool" />
+          <Member Name="H_IL_ERR" Datatype="Byte" />
+          <Member Name="H_SV_FLT" Datatype="Byte">
+            <StartValue Informative="true">16#04</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>true</IsIECCheckEnabled>
+      <LanguageInNetworks>FBD</LanguageInNetworks>
+      <LockOperatingMode>false</LockOperatingMode>
+      <Name>Seqencer</Name>
+      <Namespace />
+      <Number>4</Number>
+      <PermanentILProcessingInMANMode>false</PermanentILProcessingInMANMode>
+      <ProgrammingLanguage>GRAPH</ProgrammingLanguage>
+      <SetENOAutomatically>true</SetENOAutomatically>
+      <SkipSteps>false</SkipSteps>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+      <WithAlarmHandling>true</WithAlarmHandling>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="4" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><Graph xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/Graph/v5">
+  <PreOperations>
+    <PermanentOperation ProgrammingLanguage="FBD" />
+  </PreOperations>
+  <Sequence>
+    <Title />
+    <Comment>
+      <MultiLanguageText Lang="de-DE" />
+      <MultiLanguageText Lang="en-US" />
+    </Comment>
+    <Steps>
+      <Step Number="1" Init="true" Name="BasicPosition" MaximumStepTime="T#10S" WarningTime="T#7S">
+        <Actions>
+          <Action Qualifier="R">
+            <Token Text="#partInPos1" />
+            <Token Text="&#xA;" />
+          </Action>
+          <Action Qualifier="R">
+            <Token Text="#partInPos2" />
+            <Token Text="&#xA;" />
+          </Action>
+          <Action Qualifier="R">
+            <Token Text="#partInPos3" />
+            <Token Text="&#xA;" />
+          </Action>
+          <Action Qualifier="R">
+            <Token Text="#startConv" />
+            <Token Text="&#xA;" />
+          </Action>
+          <Action />
+        </Actions>
+        <Supervisions>
+          <Supervision ProgrammingLanguage="FBD">
+            <FlgNet>
+              <Parts>
+                <Access Scope="LocalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="StartConveyor" />
+                    <Component Name="T" />
+                  </Symbol>
+                </Access>
+                <Access Scope="TypedConstant" UId="22">
+                  <Constant>
+                    <ConstantValue>t#10ms</ConstantValue>
+                  </Constant>
+                </Access>
+                <Access Scope="LocalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="StartConveyor" />
+                    <Component Name="U" />
+                  </Symbol>
+                </Access>
+                <Access Scope="TypedConstant" UId="24">
+                  <Constant>
+                    <ConstantValue>t#10ms</ConstantValue>
+                  </Constant>
+                </Access>
+                <Part Name="Gt" UId="25">
+                  <TemplateValue Name="SrcType" Type="Type">Time</TemplateValue>
+                </Part>
+                <Part Name="Gt" UId="26">
+                  <TemplateValue Name="SrcType" Type="Type">Time</TemplateValue>
+                </Part>
+                <Part Name="A" UId="27">
+                  <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+                </Part>
+                <Part Name="SvCoil" UId="28" />
+              </Parts>
+              <Wires>
+                <Wire UId="29">
+                  <IdentCon UId="21" />
+                  <NameCon UId="25" Name="in1" />
+                </Wire>
+                <Wire UId="30">
+                  <IdentCon UId="22" />
+                  <NameCon UId="25" Name="in2" />
+                </Wire>
+                <Wire UId="31">
+                  <NameCon UId="25" Name="out" />
+                  <NameCon UId="27" Name="in1" />
+                </Wire>
+                <Wire UId="32">
+                  <IdentCon UId="23" />
+                  <NameCon UId="26" Name="in1" />
+                </Wire>
+                <Wire UId="33">
+                  <IdentCon UId="24" />
+                  <NameCon UId="26" Name="in2" />
+                </Wire>
+                <Wire UId="34">
+                  <NameCon UId="26" Name="out" />
+                  <NameCon UId="27" Name="in2" />
+                </Wire>
+                <Wire UId="35">
+                  <NameCon UId="27" Name="out" />
+                  <NameCon UId="28" Name="in" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </Supervision>
+        </Supervisions>
+        <Interlocks>
+          <Interlock ProgrammingLanguage="FBD">
+            <FlgNet>
+              <Parts>
+                <Part Name="IlCoil" UId="21" />
+              </Parts>
+              <Wires>
+                <Wire UId="23">
+                  <OpenCon UId="22" />
+                  <NameCon UId="21" Name="in" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </Interlock>
+        </Interlocks>
+      </Step>
+      <Step Number="2" Init="false" Name="StartConveyor" MaximumStepTime="T#10S" WarningTime="T#7S">
+        <Actions>
+          <Action Qualifier="S">
+            <Token Text="#automaticMode" />
+            <Token Text="&#xA;" />
+          </Action>
+          <Action Qualifier="N">
+            <Token Text="#startConv" />
+            <Token Text="&#xA;" />
+          </Action>
+          <Action />
+        </Actions>
+        <Supervisions>
+          <Supervision ProgrammingLanguage="FBD">
+            <FlgNet>
+              <Parts>
+                <Part Name="SvCoil" UId="21" />
+              </Parts>
+              <Wires>
+                <Wire UId="23">
+                  <OpenCon UId="22" />
+                  <NameCon UId="21" Name="in" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </Supervision>
+        </Supervisions>
+        <Interlocks>
+          <Interlock ProgrammingLanguage="FBD">
+            <FlgNet>
+              <Parts>
+                <Part Name="IlCoil" UId="21" />
+              </Parts>
+              <Wires>
+                <Wire UId="23">
+                  <OpenCon UId="22" />
+                  <NameCon UId="21" Name="in" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </Interlock>
+        </Interlocks>
+      </Step>
+      <Step Number="3" Init="false" Name="MovePart" MaximumStepTime="T#10S" WarningTime="T#7S">
+        <Actions>
+          <Action Qualifier="N">
+            <Token Text="#partInPos1" />
+            <Token Text="&#xA;" />
+          </Action>
+          <Action Qualifier="N">
+            <Token Text="#startConv" />
+            <Token Text="&#xA;" />
+          </Action>
+          <Action />
+        </Actions>
+        <Supervisions>
+          <Supervision ProgrammingLanguage="FBD">
+            <FlgNet>
+              <Parts>
+                <Part Name="SvCoil" UId="21" />
+              </Parts>
+              <Wires>
+                <Wire UId="23">
+                  <OpenCon UId="22" />
+                  <NameCon UId="21" Name="in" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </Supervision>
+        </Supervisions>
+        <Interlocks>
+          <Interlock ProgrammingLanguage="FBD">
+            <FlgNet>
+              <Parts>
+                <Part Name="IlCoil" UId="21" />
+              </Parts>
+              <Wires>
+                <Wire UId="23">
+                  <OpenCon UId="22" />
+                  <NameCon UId="21" Name="in" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </Interlock>
+        </Interlocks>
+      </Step>
+      <Step Number="4" Init="false" Name="GoToStation" MaximumStepTime="T#10S" WarningTime="T#7S">
+        <Actions>
+          <Action Interlock="true" Qualifier="N">
+            <Token Text="#robotGoToStation" />
+            <Token Text="&#xA;" />
+          </Action>
+          <Action />
+        </Actions>
+        <Supervisions>
+          <Supervision ProgrammingLanguage="FBD">
+            <FlgNet>
+              <Parts>
+                <Part Name="SvCoil" UId="21" />
+              </Parts>
+              <Wires>
+                <Wire UId="23">
+                  <OpenCon UId="22" />
+                  <NameCon UId="21" Name="in" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </Supervision>
+        </Supervisions>
+        <Interlocks>
+          <Interlock ProgrammingLanguage="FBD">
+            <FlgNet>
+              <Parts>
+                <Access Scope="LocalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="robotArmDown" />
+                  </Symbol>
+                </Access>
+                <Part Name="IlCoil" UId="22">
+                  <Negated Name="in" />
+                </Part>
+              </Parts>
+              <Wires>
+                <Wire UId="23">
+                  <IdentCon UId="21" />
+                  <NameCon UId="22" Name="in" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </Interlock>
+        </Interlocks>
+      </Step>
+      <Step Number="5" Init="false" Name="Fill" MaximumStepTime="T#10S" WarningTime="T#7S">
+        <Actions>
+          <Action Qualifier="N">
+            <Token Text="#robotFill" />
+            <Token Text="&#xA;" />
+          </Action>
+          <Action />
+        </Actions>
+        <Supervisions>
+          <Supervision ProgrammingLanguage="FBD">
+            <FlgNet>
+              <Parts>
+                <Part Name="SvCoil" UId="21" />
+              </Parts>
+              <Wires>
+                <Wire UId="23">
+                  <OpenCon UId="22" />
+                  <NameCon UId="21" Name="in" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </Supervision>
+        </Supervisions>
+        <Interlocks>
+          <Interlock ProgrammingLanguage="FBD">
+            <FlgNet>
+              <Parts>
+                <Part Name="IlCoil" UId="21" />
+              </Parts>
+              <Wires>
+                <Wire UId="23">
+                  <OpenCon UId="22" />
+                  <NameCon UId="21" Name="in" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </Interlock>
+        </Interlocks>
+      </Step>
+      <Step Number="6" Init="false" Name="GoToMagazine" MaximumStepTime="T#10S" WarningTime="T#7S">
+        <Actions>
+          <Action Qualifier="N">
+            <Token Text="#robotGoToMagazine" />
+            <Token Text="&#xA;" />
+          </Action>
+          <Action />
+        </Actions>
+        <Supervisions>
+          <Supervision ProgrammingLanguage="FBD">
+            <FlgNet>
+              <Parts>
+                <Part Name="SvCoil" UId="21" />
+              </Parts>
+              <Wires>
+                <Wire UId="23">
+                  <OpenCon UId="22" />
+                  <NameCon UId="21" Name="in" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </Supervision>
+        </Supervisions>
+        <Interlocks>
+          <Interlock ProgrammingLanguage="FBD">
+            <FlgNet>
+              <Parts>
+                <Part Name="IlCoil" UId="21" />
+              </Parts>
+              <Wires>
+                <Wire UId="23">
+                  <OpenCon UId="22" />
+                  <NameCon UId="21" Name="in" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </Interlock>
+        </Interlocks>
+      </Step>
+      <Step Number="7" Init="false" Name="RemovePart" MaximumStepTime="T#10S" WarningTime="T#7S">
+        <Actions>
+          <Action Qualifier="N">
+            <Token Text="#startConv" />
+            <Token Text="&#xA;" />
+          </Action>
+          <Action />
+        </Actions>
+        <Supervisions>
+          <Supervision ProgrammingLanguage="FBD">
+            <FlgNet>
+              <Parts>
+                <Access Scope="LocalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="RemovePart" />
+                    <Component Name="T" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="RemovePart" />
+                    <Component Name="T_MAX" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="23">
+                  <Symbol>
+                    <Component Name="RemovePart" />
+                    <Component Name="T" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="24">
+                  <Symbol>
+                    <Component Name="RemovePart" />
+                    <Component Name="T_WARN" />
+                  </Symbol>
+                </Access>
+                <Part Name="Lt" UId="25">
+                  <TemplateValue Name="SrcType" Type="Type">Time</TemplateValue>
+                </Part>
+                <Part Name="Gt" UId="26">
+                  <TemplateValue Name="SrcType" Type="Type">Time</TemplateValue>
+                </Part>
+                <Part Name="A" UId="27">
+                  <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+                </Part>
+                <Part Name="SvCoil" UId="28" />
+              </Parts>
+              <Wires>
+                <Wire UId="29">
+                  <IdentCon UId="21" />
+                  <NameCon UId="25" Name="in1" />
+                </Wire>
+                <Wire UId="30">
+                  <IdentCon UId="22" />
+                  <NameCon UId="25" Name="in2" />
+                </Wire>
+                <Wire UId="31">
+                  <NameCon UId="25" Name="out" />
+                  <NameCon UId="27" Name="in1" />
+                </Wire>
+                <Wire UId="32">
+                  <IdentCon UId="23" />
+                  <NameCon UId="26" Name="in1" />
+                </Wire>
+                <Wire UId="33">
+                  <IdentCon UId="24" />
+                  <NameCon UId="26" Name="in2" />
+                </Wire>
+                <Wire UId="34">
+                  <NameCon UId="26" Name="out" />
+                  <NameCon UId="27" Name="in2" />
+                </Wire>
+                <Wire UId="35">
+                  <NameCon UId="27" Name="out" />
+                  <NameCon UId="28" Name="in" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </Supervision>
+        </Supervisions>
+        <Interlocks>
+          <Interlock ProgrammingLanguage="FBD">
+            <FlgNet>
+              <Parts>
+                <Part Name="IlCoil" UId="21" />
+              </Parts>
+              <Wires>
+                <Wire UId="23">
+                  <OpenCon UId="22" />
+                  <NameCon UId="21" Name="in" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </Interlock>
+        </Interlocks>
+      </Step>
+      <Step Number="8" Init="false" Name="ResetConveyor" MaximumStepTime="T#10S" WarningTime="T#7S">
+        <Actions>
+          <Action Qualifier="R">
+            <Token Text="#startConv" />
+            <Token Text="&#xA;" />
+          </Action>
+          <Action />
+        </Actions>
+        <Supervisions>
+          <Supervision ProgrammingLanguage="FBD">
+            <FlgNet>
+              <Parts>
+                <Part Name="SvCoil" UId="21" />
+              </Parts>
+              <Wires>
+                <Wire UId="23">
+                  <OpenCon UId="22" />
+                  <NameCon UId="21" Name="in" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </Supervision>
+        </Supervisions>
+        <Interlocks>
+          <Interlock ProgrammingLanguage="FBD">
+            <FlgNet>
+              <Parts>
+                <Part Name="IlCoil" UId="21" />
+              </Parts>
+              <Wires>
+                <Wire UId="23">
+                  <OpenCon UId="22" />
+                  <NameCon UId="21" Name="in" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </Interlock>
+        </Interlocks>
+      </Step>
+      <Step Number="9" Init="false" Name="ResetPositions" MaximumStepTime="T#10S" WarningTime="T#7S">
+        <Actions>
+          <Action Qualifier="R">
+            <Token Text="#partInPos1" />
+            <Token Text="&#xA;" />
+          </Action>
+          <Action Qualifier="R">
+            <Token Text="#partInPos2" />
+            <Token Text="&#xA;" />
+          </Action>
+          <Action Qualifier="R">
+            <Token Text="#partInPos3" />
+            <Token Text="&#xA;" />
+          </Action>
+          <Action />
+        </Actions>
+        <Supervisions>
+          <Supervision ProgrammingLanguage="FBD">
+            <FlgNet>
+              <Parts>
+                <Part Name="SvCoil" UId="21" />
+              </Parts>
+              <Wires>
+                <Wire UId="23">
+                  <OpenCon UId="22" />
+                  <NameCon UId="21" Name="in" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </Supervision>
+        </Supervisions>
+        <Interlocks>
+          <Interlock ProgrammingLanguage="FBD">
+            <FlgNet>
+              <Parts>
+                <Access Scope="LocalVariable" UId="21">
+                  <Symbol>
+                    <Component Name="ResetPositions" />
+                    <Component Name="T" />
+                  </Symbol>
+                </Access>
+                <Access Scope="LocalVariable" UId="22">
+                  <Symbol>
+                    <Component Name="ResetPositions" />
+                    <Component Name="T_MAX" />
+                  </Symbol>
+                </Access>
+                <Part Name="Gt" UId="23">
+                  <TemplateValue Name="SrcType" Type="Type">Time</TemplateValue>
+                </Part>
+                <Part Name="IlCoil" UId="24" />
+              </Parts>
+              <Wires>
+                <Wire UId="25">
+                  <IdentCon UId="21" />
+                  <NameCon UId="23" Name="in1" />
+                </Wire>
+                <Wire UId="26">
+                  <IdentCon UId="22" />
+                  <NameCon UId="23" Name="in2" />
+                </Wire>
+                <Wire UId="27">
+                  <NameCon UId="23" Name="out" />
+                  <NameCon UId="24" Name="in" />
+                </Wire>
+              </Wires>
+            </FlgNet>
+          </Interlock>
+        </Interlocks>
+      </Step>
+    </Steps>
+    <Transitions>
+      <Transition IsMissing="false" Name="Trans1" Number="1" ProgrammingLanguage="FBD">
+        <FlgNet>
+          <Parts>
+            <Access Scope="LocalVariable" UId="21">
+              <Symbol>
+                <Component Name="startButton" />
+              </Symbol>
+            </Access>
+            <Part Name="A" UId="22">
+              <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+            </Part>
+            <Part Name="TrCoil" UId="23" />
+          </Parts>
+          <Wires>
+            <Wire UId="24">
+              <IdentCon UId="21" />
+              <NameCon UId="22" Name="in1" />
+            </Wire>
+            <Wire UId="25">
+              <NameCon UId="22" Name="out" />
+              <NameCon UId="23" Name="in" />
+            </Wire>
+          </Wires>
+        </FlgNet>
+      </Transition>
+      <Transition IsMissing="false" Name="Trans2" Number="2" ProgrammingLanguage="FBD">
+        <FlgNet>
+          <Parts>
+            <Access Scope="LocalVariable" UId="21">
+              <Symbol>
+                <Component Name="lightBeam1" />
+              </Symbol>
+            </Access>
+            <Access Scope="LocalVariable" UId="22">
+              <Symbol>
+                <Component Name="lightBeam2" />
+              </Symbol>
+            </Access>
+            <Access Scope="LocalVariable" UId="23">
+              <Symbol>
+                <Component Name="lightBeam3" />
+              </Symbol>
+            </Access>
+            <Part Name="A" UId="24">
+              <TemplateValue Name="Card" Type="Cardinality">3</TemplateValue>
+              <Negated Name="in2" />
+              <Negated Name="in3" />
+            </Part>
+            <Part Name="TrCoil" UId="25" />
+          </Parts>
+          <Wires>
+            <Wire UId="26">
+              <IdentCon UId="21" />
+              <NameCon UId="24" Name="in1" />
+            </Wire>
+            <Wire UId="27">
+              <IdentCon UId="22" />
+              <NameCon UId="24" Name="in2" />
+            </Wire>
+            <Wire UId="28">
+              <IdentCon UId="23" />
+              <NameCon UId="24" Name="in3" />
+            </Wire>
+            <Wire UId="29">
+              <NameCon UId="24" Name="out" />
+              <NameCon UId="25" Name="in" />
+            </Wire>
+          </Wires>
+        </FlgNet>
+      </Transition>
+      <Transition IsMissing="false" Name="Trans3" Number="3" ProgrammingLanguage="FBD">
+        <FlgNet>
+          <Parts>
+            <Access Scope="LocalVariable" UId="21">
+              <Symbol>
+                <Component Name="lightBeam2" />
+              </Symbol>
+            </Access>
+            <Part Name="A" UId="22">
+              <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+            </Part>
+            <Part Name="TrCoil" UId="23" />
+          </Parts>
+          <Wires>
+            <Wire UId="24">
+              <IdentCon UId="21" />
+              <NameCon UId="22" Name="in1" />
+            </Wire>
+            <Wire UId="25">
+              <NameCon UId="22" Name="out" />
+              <NameCon UId="23" Name="in" />
+            </Wire>
+          </Wires>
+        </FlgNet>
+      </Transition>
+      <Transition IsMissing="false" Name="Trans4" Number="4" ProgrammingLanguage="FBD">
+        <FlgNet>
+          <Parts>
+            <Access Scope="LocalVariable" UId="21">
+              <Symbol>
+                <Component Name="robotOnStation" />
+              </Symbol>
+            </Access>
+            <Part Name="A" UId="22">
+              <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+            </Part>
+            <Part Name="TrCoil" UId="23" />
+          </Parts>
+          <Wires>
+            <Wire UId="24">
+              <IdentCon UId="21" />
+              <NameCon UId="22" Name="in1" />
+            </Wire>
+            <Wire UId="25">
+              <NameCon UId="22" Name="out" />
+              <NameCon UId="23" Name="in" />
+            </Wire>
+          </Wires>
+        </FlgNet>
+      </Transition>
+      <Transition IsMissing="false" Name="Trans5" Number="5" ProgrammingLanguage="FBD">
+        <FlgNet>
+          <Parts>
+            <Access Scope="LocalVariable" UId="21">
+              <Symbol>
+                <Component Name="Fill" />
+                <Component Name="T" />
+              </Symbol>
+            </Access>
+            <Access Scope="TypedConstant" UId="22">
+              <Constant>
+                <ConstantValue>t#3s</ConstantValue>
+              </Constant>
+            </Access>
+            <Part Name="Gt" UId="23">
+              <TemplateValue Name="SrcType" Type="Type">Time</TemplateValue>
+            </Part>
+            <Part Name="TrCoil" UId="24" />
+          </Parts>
+          <Wires>
+            <Wire UId="25">
+              <IdentCon UId="21" />
+              <NameCon UId="23" Name="in1" />
+            </Wire>
+            <Wire UId="26">
+              <IdentCon UId="22" />
+              <NameCon UId="23" Name="in2" />
+            </Wire>
+            <Wire UId="27">
+              <NameCon UId="23" Name="out" />
+              <NameCon UId="24" Name="in" />
+            </Wire>
+          </Wires>
+        </FlgNet>
+      </Transition>
+      <Transition IsMissing="false" Name="Trans6" Number="6" ProgrammingLanguage="FBD">
+        <FlgNet>
+          <Parts>
+            <Access Scope="LocalVariable" UId="21">
+              <Symbol>
+                <Component Name="robotOnMagazine" />
+              </Symbol>
+            </Access>
+            <Part Name="TrCoil" UId="22" />
+          </Parts>
+          <Wires>
+            <Wire UId="23">
+              <IdentCon UId="21" />
+              <NameCon UId="22" Name="in" />
+            </Wire>
+          </Wires>
+        </FlgNet>
+      </Transition>
+      <Transition IsMissing="false" Name="Return" Number="7" ProgrammingLanguage="FBD">
+        <FlgNet>
+          <Parts>
+            <Access Scope="LocalVariable" UId="21">
+              <Symbol>
+                <Component Name="statLightbeam3Fal" />
+              </Symbol>
+            </Access>
+            <Access Scope="LocalVariable" UId="22">
+              <Symbol>
+                <Component Name="RemovePart" />
+                <Component Name="T" />
+              </Symbol>
+            </Access>
+            <Access Scope="TypedConstant" UId="23">
+              <Constant>
+                <ConstantValue>t#3s</ConstantValue>
+              </Constant>
+            </Access>
+            <Part Name="Gt" UId="24">
+              <TemplateValue Name="SrcType" Type="Type">Time</TemplateValue>
+            </Part>
+            <Part Name="A" UId="25">
+              <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+            </Part>
+            <Part Name="TrCoil" UId="26" />
+          </Parts>
+          <Wires>
+            <Wire UId="27">
+              <IdentCon UId="22" />
+              <NameCon UId="24" Name="in1" />
+            </Wire>
+            <Wire UId="28">
+              <IdentCon UId="23" />
+              <NameCon UId="24" Name="in2" />
+            </Wire>
+            <Wire UId="29">
+              <NameCon UId="24" Name="out" />
+              <NameCon UId="25" Name="in2" />
+            </Wire>
+            <Wire UId="30">
+              <IdentCon UId="21" />
+              <NameCon UId="25" Name="in1" />
+            </Wire>
+            <Wire UId="31">
+              <NameCon UId="25" Name="out" />
+              <NameCon UId="26" Name="in" />
+            </Wire>
+          </Wires>
+        </FlgNet>
+      </Transition>
+      <Transition IsMissing="false" Name="BackTo" Number="8" ProgrammingLanguage="FBD">
+        <FlgNet>
+          <Parts>
+            <Access Scope="LocalVariable" UId="21">
+              <Symbol>
+                <Component Name="lightBeam3" />
+              </Symbol>
+            </Access>
+            <Access Scope="LocalVariable" UId="22">
+              <Symbol>
+                <Component Name="RemovePart" />
+                <Component Name="T" />
+              </Symbol>
+            </Access>
+            <Access Scope="TypedConstant" UId="23">
+              <Constant>
+                <ConstantValue>t#5s</ConstantValue>
+              </Constant>
+            </Access>
+            <Part Name="Gt" UId="24">
+              <TemplateValue Name="SrcType" Type="Type">Time</TemplateValue>
+            </Part>
+            <Part Name="A" UId="25">
+              <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+            </Part>
+            <Part Name="TrCoil" UId="26" />
+          </Parts>
+          <Wires>
+            <Wire UId="27">
+              <IdentCon UId="22" />
+              <NameCon UId="24" Name="in1" />
+            </Wire>
+            <Wire UId="28">
+              <IdentCon UId="23" />
+              <NameCon UId="24" Name="in2" />
+            </Wire>
+            <Wire UId="29">
+              <NameCon UId="24" Name="out" />
+              <NameCon UId="25" Name="in2" />
+            </Wire>
+            <Wire UId="30">
+              <IdentCon UId="21" />
+              <NameCon UId="25" Name="in1" />
+            </Wire>
+            <Wire UId="31">
+              <NameCon UId="25" Name="out" />
+              <NameCon UId="26" Name="in" />
+            </Wire>
+          </Wires>
+        </FlgNet>
+      </Transition>
+      <Transition IsMissing="false" Name="Trans9" Number="9" ProgrammingLanguage="FBD">
+        <FlgNet>
+          <Parts>
+            <Access Scope="LocalVariable" UId="21">
+              <Symbol>
+                <Component Name="ResetConveyor" />
+                <Component Name="T" />
+              </Symbol>
+            </Access>
+            <Access Scope="TypedConstant" UId="22">
+              <Constant>
+                <ConstantValue>t#5s</ConstantValue>
+              </Constant>
+            </Access>
+            <Part Name="Gt" UId="23">
+              <TemplateValue Name="SrcType" Type="Type">Time</TemplateValue>
+            </Part>
+            <Part Name="TrCoil" UId="24" />
+          </Parts>
+          <Wires>
+            <Wire UId="25">
+              <IdentCon UId="21" />
+              <NameCon UId="23" Name="in1" />
+            </Wire>
+            <Wire UId="26">
+              <IdentCon UId="22" />
+              <NameCon UId="23" Name="in2" />
+            </Wire>
+            <Wire UId="27">
+              <NameCon UId="23" Name="out" />
+              <NameCon UId="24" Name="in" />
+            </Wire>
+          </Wires>
+        </FlgNet>
+      </Transition>
+    </Transitions>
+    <Branches>
+      <Branch Number="1" Type="AltBegin" Cardinality="2" />
+      <Branch Number="2" Type="SimBegin" Cardinality="2" />
+      <Branch Number="3" Type="SimEnd" Cardinality="2" />
+    </Branches>
+    <Connections>
+      <Connection>
+        <NodeFrom>
+          <StepRef Number="1" />
+        </NodeFrom>
+        <NodeTo>
+          <TransitionRef Number="1" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <StepRef Number="2" />
+        </NodeFrom>
+        <NodeTo>
+          <TransitionRef Number="2" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <StepRef Number="3" />
+        </NodeFrom>
+        <NodeTo>
+          <TransitionRef Number="3" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <TransitionRef Number="2" />
+        </NodeFrom>
+        <NodeTo>
+          <StepRef Number="3" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <StepRef Number="4" />
+        </NodeFrom>
+        <NodeTo>
+          <TransitionRef Number="4" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <TransitionRef Number="3" />
+        </NodeFrom>
+        <NodeTo>
+          <StepRef Number="4" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <StepRef Number="5" />
+        </NodeFrom>
+        <NodeTo>
+          <TransitionRef Number="5" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <TransitionRef Number="4" />
+        </NodeFrom>
+        <NodeTo>
+          <StepRef Number="5" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <StepRef Number="6" />
+        </NodeFrom>
+        <NodeTo>
+          <TransitionRef Number="6" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <TransitionRef Number="5" />
+        </NodeFrom>
+        <NodeTo>
+          <StepRef Number="6" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <TransitionRef Number="6" />
+        </NodeFrom>
+        <NodeTo>
+          <StepRef Number="7" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <StepRef Number="7" />
+        </NodeFrom>
+        <NodeTo>
+          <BranchRef Number="1" In="0" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <BranchRef Number="1" Out="0" />
+        </NodeFrom>
+        <NodeTo>
+          <TransitionRef Number="7" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <BranchRef Number="1" Out="1" />
+        </NodeFrom>
+        <NodeTo>
+          <TransitionRef Number="8" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <TransitionRef Number="8" />
+        </NodeFrom>
+        <NodeTo>
+          <BranchRef Number="2" In="0" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <BranchRef Number="2" Out="0" />
+        </NodeFrom>
+        <NodeTo>
+          <StepRef Number="8" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <BranchRef Number="2" Out="1" />
+        </NodeFrom>
+        <NodeTo>
+          <StepRef Number="9" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <StepRef Number="8" />
+        </NodeFrom>
+        <NodeTo>
+          <BranchRef Number="3" In="0" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <BranchRef Number="3" Out="0" />
+        </NodeFrom>
+        <NodeTo>
+          <TransitionRef Number="9" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <StepRef Number="9" />
+        </NodeFrom>
+        <NodeTo>
+          <BranchRef Number="3" In="1" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <TransitionRef Number="1" />
+        </NodeFrom>
+        <NodeTo>
+          <StepRef Number="2" />
+        </NodeTo>
+        <LinkType>Direct</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <TransitionRef Number="7" />
+        </NodeFrom>
+        <NodeTo>
+          <StepRef Number="2" />
+        </NodeTo>
+        <LinkType>Jump</LinkType>
+      </Connection>
+      <Connection>
+        <NodeFrom>
+          <TransitionRef Number="9" />
+        </NodeFrom>
+        <NodeTo>
+          <StepRef Number="2" />
+        </NodeTo>
+        <LinkType>Jump</LinkType>
+      </Connection>
+    </Connections>
+  </Sequence>
+  <PostOperations>
+    <PermanentOperation ProgrammingLanguage="FBD" />
+  </PostOperations>
+  <AlarmsSettings>
+    <AlarmSupervisionCategories>
+      <AlarmSupervisionCategory Id="1" DisplayClass="0" />
+      <AlarmSupervisionCategory Id="2" DisplayClass="0" />
+      <AlarmSupervisionCategory Id="3" DisplayClass="0" />
+      <AlarmSupervisionCategory Id="4" DisplayClass="0" />
+      <AlarmSupervisionCategory Id="5" DisplayClass="0" />
+      <AlarmSupervisionCategory Id="6" DisplayClass="0" />
+      <AlarmSupervisionCategory Id="7" DisplayClass="0" />
+      <AlarmSupervisionCategory Id="8" DisplayClass="0" />
+    </AlarmSupervisionCategories>
+    <AlarmInterlockCategory Id="1" />
+    <AlarmSubcategory1Interlock Id="0" />
+    <AlarmSubcategory2Interlock Id="0" />
+    <AlarmCategorySupervision Id="1" />
+    <AlarmSubcategory1Supervision Id="0" />
+    <AlarmSubcategory2Supervision Id="0" />
+    <AlarmWarningCategory Id="2" />
+    <AlarmSubcategory1Warning Id="0" />
+    <AlarmSubcategory2Warning Id="0" />
+  </AlarmsSettings>
+</Graph></NetworkSource>
+          <ProgrammingLanguage>GRAPH</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="6" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="8" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="B" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

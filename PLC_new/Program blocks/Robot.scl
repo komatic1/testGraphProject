@@ -1,0 +1,149 @@
+﻿FUNCTION_BLOCK "Robot"
+{ S7_Optimized_Access := 'TRUE' }
+AUTHOR : dda
+VERSION : 0.1
+   VAR_INPUT 
+      goToMagazine { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      goToStation { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      fill { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      xPosition { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Int;
+      yPosition { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Int;
+   END_VAR
+
+   VAR_OUTPUT 
+      pressingNut { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      moveUp { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      moveDown { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      moveLeft { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      isOnStation { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      isOnMagazine { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      moveRight { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+   END_VAR
+
+   VAR 
+      statMoveUp { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      statMoveDown { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      statMoveLeft { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      statMoveRight { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      statIsOnMagazine { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      statPressingNut { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      statGoToStation { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      statIsOnStation { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      statRobot { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Int;
+   END_VAR
+
+   VAR_TEMP 
+      tempYPosition : Int;
+      tempXPosition : Int;
+   END_VAR
+
+   VAR CONSTANT 
+      ARM_UP : Int := 1;   // object arrived position 1
+      DIRECTION_RIGHT : Int := 6;
+      OBJECT_FILL : Int := 4;   // object arrived position 2 and not filled
+      DIRECTION_LEFT : Int := 2;
+      ARM_DOWN : Int := 3;   // object arrived position 2 and Filled
+      ARM_UP_BACK : Int := 5;
+      ARM_DOWN_BACK : Int := 7;
+      IDLE : Int := 0;
+   END_VAR
+
+
+BEGIN
+	// functionality: Robot
+	// 
+	
+	// read inputs
+	#tempYPosition := #yPosition;
+	#tempXPosition := #xPosition;
+	
+	CASE #statRobot OF
+	    // robot on magazine
+	  #IDLE:
+	    #statMoveDown := FALSE;
+	    #statIsOnMagazine := FALSE;
+	    IF (#goToStation = TRUE) THEN
+	      #statRobot := #ARM_UP;
+	    END_IF;
+	    
+	    // robot move up
+	  #ARM_UP:
+	    #statMoveDown := FALSE;
+	    #statMoveUp := TRUE;
+	    IF (#tempYPosition = 100) THEN
+	      #statRobot := #ARM_UP;
+	    END_IF;
+	    
+	    // robot moves to the left direction  
+	  #DIRECTION_LEFT:
+	    #statMoveUp := FALSE;
+	    #statMoveLeft := TRUE;
+	    IF (#tempXPosition = 100) THEN
+	      #statRobot := #ARM_DOWN;
+	    END_IF;
+	    
+	    // robot moves down
+	  #ARM_DOWN:
+	    #statMoveLeft := FALSE;
+	    #statMoveDown := TRUE;
+	    IF (#tempYPosition = 0) THEN
+	      #statIsOnStation := TRUE;
+	      #statRobot := #OBJECT_FILL;
+	    END_IF;
+	    
+	    // fill
+	  #OBJECT_FILL:
+	    #statMoveDown := FALSE;
+	    #statIsOnStation := FALSE;
+	    #statPressingNut := #fill;
+	    IF (#goToMagazine = TRUE) THEN
+	      #statRobot := #ARM_UP_BACK;
+	    END_IF;
+	    
+	    // robot moves up
+	  #ARM_UP_BACK:
+	    #statMoveUp := true;
+	    #statPressingNut := FALSE;
+	    IF (#tempYPosition = 100) THEN
+	      #statRobot := #DIRECTION_RIGHT;
+	    END_IF;
+	    
+	    // robot moves to the right direction
+	  #DIRECTION_RIGHT:
+	    #statMoveUp := FALSE;
+	    #statMoveRight := TRUE;
+	    IF (#tempXPosition = 0) THEN
+	      #statRobot := #ARM_DOWN_BACK;
+	    END_IF;
+	    
+	    // robot moves down back to magazine
+	  #ARM_DOWN_BACK:
+	    #statMoveRight := FALSE;
+	    #statMoveDown := TRUE;
+	    IF (#tempYPosition = 0) THEN
+	      #statIsOnMagazine := TRUE;
+	      #statRobot := #IDLE;
+	    END_IF;
+	    
+	  ELSE
+	    ;
+	END_CASE;
+	
+	// write outputs
+	#moveUp := #statMoveUp;
+	#moveDown := #statMoveDown;
+	#moveLeft := #statMoveLeft;
+	#moveRight := #statMoveRight;
+	#isOnMagazine := #statIsOnMagazine;
+	#isOnStation := #statIsOnStation;
+	#pressingNut := #statPressingNut;
+	      
+	      
+	    
+	      
+	        
+	      
+	      
+	
+END_FUNCTION_BLOCK
+

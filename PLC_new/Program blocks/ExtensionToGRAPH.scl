@@ -1,0 +1,92 @@
+﻿FUNCTION_BLOCK "ExtensionToGRAPH"
+{ S7_Optimized_Access := 'TRUE' }
+AUTHOR : dda
+VERSION : 0.1
+   VAR_IN_OUT 
+      extRTData {InstructionName := 'G7_RTDataPlus_V6'; LibVersion := '1.0'} : G7_RTDataPlus_V6;
+      extG7T {InstructionName := 'G7_TransitionPlus_V6'; LibVersion := '1.0'} : Array[*] of G7_TransitionPlus_V6;
+      extG7S {InstructionName := 'G7_StepPlus_V6'; LibVersion := '1.0'} : Array[*] of G7_StepPlus_V6;
+      extG7Arrays : Array[*] of USInt;
+   END_VAR
+
+   VAR 
+      statLowerG7T { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : DInt;
+      statUpperG7T { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : DInt;
+      statLowerG7S { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : DInt;
+      statUpperG7S { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : DInt;
+      statUserTransitionNumber : Int;
+      statUserStepNumber : Int;
+      statUserActiveSteps : USInt;
+      statUserSatisfiedTrans : USInt;
+   END_VAR
+
+   VAR_TEMP 
+      tempG7TIndex : DInt;
+      tempG7SIndex : DInt;
+   END_VAR
+
+
+BEGIN
+	// Functionality: extension functionality for iterative acces to Graph 
+	// variables and invisible GraphStatusVariables.
+	// 
+	
+	REGION ReadArrayBoundaries
+	  // Read ArrayBoundaries of predefinedGreph-Array's
+	  // 
+	  #statLowerG7T := LOWER_BOUND(ARR := #extG7T, DIM := 1);
+	  #statUpperG7T := UPPER_BOUND(ARR := #extG7T, DIM := 1);
+	  
+	  #statLowerG7S := LOWER_BOUND(ARR := #extG7S, DIM := 1);
+	  #statUpperG7S := UPPER_BOUND(ARR := #extG7S, DIM := 1);
+	  
+	  
+	END_REGION
+	
+	
+	REGION IterrativeTransitionAcces
+	  // Example: As a programmer I want to check whether a specific transation
+	  // number (e.g. asked via HMI-Panel) is available in the Graph block.
+	  // 
+	  
+	  FOR #tempG7TIndex := #statLowerG7T TO #statUpperG7T  BY 1 DO
+	    ;
+	    IF (#extG7T[#tempG7TIndex].TNO = #statUserTransitionNumber)
+	    THEN
+	      ;
+	      // do any action
+	    END_IF;
+	  END_FOR;
+	  
+	  
+	END_REGION
+	
+	REGION IterrativeStepAcces
+	  // Example: As a programmer I want to check whether a specific step
+	  // number (e.g. asked via HMI-Panel) is available in the Graph block.
+	  // 
+	  
+	  FOR #tempG7SIndex := #statLowerG7S TO #statUpperG7S BY 1 DO
+	    ;
+	    IF (#extG7S[#tempG7SIndex].SNO = #statUserStepNumber)
+	    THEN
+	      ;
+	      // do any action
+	    END_IF;
+	  END_FOR;
+	  
+	  
+	END_REGION
+	
+	REGION ReadGraphStatusVariables
+	  
+	  #statUserActiveSteps := #extG7Arrays[#extRTData.OFFSETS.SAX_OFFSET] - 1;
+	  
+	  #statUserSatisfiedTrans := #extG7Arrays[#extRTData.OFFSETS.TTX_OFFSET] - 1;
+	  
+	END_REGION
+	
+	
+	
+END_FUNCTION_BLOCK
+
