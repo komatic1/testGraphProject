@@ -958,14 +958,6 @@
   </Section>
   <Section Name="InOut" />
   <Section Name="Static">
-    <Member Name="safetyOK" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
-      <AttributeList>
-        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
-        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
-        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
-        <BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute>
-      </AttributeList>
-    </Member>
     <Member Name="statLightbeam3Fal" Datatype="Bool" Remanence="NonRetain" Accessibility="Public">
       <AttributeList>
         <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute>
@@ -1170,7 +1162,7 @@
             <StartValue Informative="true">9</StartValue>
           </Member>
           <Member Name="LOCK_CNT" Datatype="USInt">
-            <StartValue Informative="true">3</StartValue>
+            <StartValue Informative="true">2</StartValue>
           </Member>
           <Member Name="SUP_CNT" Datatype="USInt">
             <StartValue Informative="true">2</StartValue>
@@ -2154,17 +2146,12 @@
             </AlarmText>
             <FlgNet>
               <Parts>
-                <Access Scope="LocalVariable" UId="21">
-                  <Symbol>
-                    <Component Name="safetyOK" />
-                  </Symbol>
-                </Access>
-                <Part Name="IlCoil" UId="22" />
+                <Part Name="IlCoil" UId="21" />
               </Parts>
               <Wires>
                 <Wire UId="23">
-                  <IdentCon UId="21" />
-                  <NameCon UId="22" Name="in" />
+                  <OpenCon UId="22" />
+                  <NameCon UId="21" Name="in" />
                 </Wire>
               </Wires>
             </FlgNet>
